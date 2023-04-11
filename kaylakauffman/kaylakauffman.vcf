@@ -1,0 +1,21 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Kauffman;Kayla;;;
+FN:Kayla Kauffman
+ORG:University of California, Santa Barbara
+ADR;TYPE=WORK:Young Lab
+
+TITLE:PhD Student
+TEL;TYPE=CELL:+14084559266
+TEL;TYPE=WORK:
+TEL;TYPE=HOME:
+TEL;TYPE=MSG:
+EMAIL;TYPE=WORK:kaylakauffman@ucsb.edu
+URL;TYPE=Digital Business Card:
+URL:
+URL;TYPE=WhatsApp:+14084559266
+URL;TYPE=GitHub:https://github.com/kmkauffm
+KEY;TYPE=PGP;ENCODING=b:
+NOTE:Disease Ecology - One Health
+UID:EnBizCard-100534988
+END:VCARD

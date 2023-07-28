@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Kayla Kauffman",
-    "section": "",
-    "text": "(she/her)\nPhD Student\nUniversity of California, Santa Barbara\nYoung Lab\nDisease Ecology - One Health"
+    "objectID": "index.html#kayla-kauffman",
+    "href": "index.html#kayla-kauffman",
+    "title": "About",
+    "section": "Kayla Kauffman",
+    "text": "Kayla Kauffman\n(she/her)\nPhD Student\nUniversity of California, Santa Barbara\nYoung Lab\nlink to ESA 2023 poster"
   },
   {
     "objectID": "index.html#research-interests",
@@ -19,13 +19,6 @@
     "title": "About",
     "section": "Expertise related to UN Sustainable Development Goals",
     "text": "Expertise related to UN Sustainable Development Goals\nThe Sustainable Development Goals (link) aim to end poverty, protext the planet, and ensure prosperity for all. My work contributes towards the following goals:"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
   },
   {
     "objectID": "publications.html",
@@ -89,12 +82,5 @@
     "title": "Research",
     "section": "Past Projects",
     "text": "Past Projects\n\nMaster’s Thesis\nMy Master’s thesis was on Adenovirus Hemorrahagic Disease which infects deer, elk, and moose in the Western United States. I used archeived samples to compare the distributions of genotypes of this virus across its range, as a first step towards explaining the observed differences in disease severity. I also studied maternal transmission of the virus in mule deer, to further our understanding of how the virus is maintained in a population and its potential impacts on neonates (Kauffman et. al, 2020)."
-  },
-  {
-    "objectID": "index.html#kayla-kauffman",
-    "href": "index.html#kayla-kauffman",
-    "title": "About",
-    "section": "Kayla Kauffman",
-    "text": "Kayla Kauffman\n(she/her)\nPhD Student\nUniversity of California, Santa Barbara\nYoung Lab\nlink to ESA 2023 poster"
   }
 ]

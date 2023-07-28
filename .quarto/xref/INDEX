@@ -10,5 +10,14 @@
   },
   "research.qmd": {
     "research.html": "6a22601b"
+  },
+  "personalwebsite/index.qmd": {
+    "index.html": "4c1b72a9"
+  },
+  "personalwebsite/publications.qmd": {
+    "publications.html": "6fe8bb2a"
+  },
+  "personalwebsite/research.qmd": {
+    "research.html": "ae936799"
   }
 }

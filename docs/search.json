@@ -19,5 +19,68 @@
     "title": "About",
     "section": "Expertise related to UN Sustainable Development Goals",
     "text": "Expertise related to UN Sustainable Development Goals\nThe Sustainable Development Goals (link) aim to end poverty, protext the planet, and ensure prosperity for all. My work contributes towards the following goals:"
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Dog Leptospira Vaccination poster preview"
+  },
+  {
+    "objectID": "publications.html#section",
+    "href": "publications.html#section",
+    "title": "Publications",
+    "section": "2023",
+    "text": "2023\n\nMV Evans, T Ramiadantsoa, K Kauffman, J Moody, C Nunn, JY Rabezara, P Raharimalala, TM Randriamoria, V Soarimalala, G Titcomb, A Garchitorena, and B Roche. 2023. Socio-demographic variables can guide prioritized testing strategies for epidemic control in resource-limited contexts. Journal of Infectious Diseases. https://doi.org/10.1093/infdis/jiad076"
+  },
+  {
+    "objectID": "publications.html#section-1",
+    "href": "publications.html#section-1",
+    "title": "Publications",
+    "section": "2022",
+    "text": "2022\nKauffman Kayla, Werner Courtney S., Titcomb Georgia, Pender Michelle, Rabezara Jean Yves, Herrera James P., Shapiro Julie Teresa, Solis Alma, Soarimalala Voahangy, Tortosa Pablo, Kramer Randall, Moody James, Mucha Peter J. and Nunn Charles. 2022. Comparing transmission potential networks based on social network surveys, close contacts and environmental overlap in rural Madagascar. J. R. Soc. Interface. 19:20210690. 20210690. http://doi.org/10.1098/rsif.2021.0690"
+  },
+  {
+    "objectID": "publications.html#section-2",
+    "href": "publications.html#section-2",
+    "title": "Publications",
+    "section": "2021",
+    "text": "2021\nKayla M. Kauffman, Todd E. Cornish, Kevin Monteith, Brant A. Schumaker, Tayler LaSharr, Katey Huggler, and Myrna Miller. Detection of Deer atadenovirus A DNA in dam and offspring pairs of Rocky Mountain mule deer (Odocoileus hemionus hemionus) and Rocky Mountain elk (Cervus canadensis nelson). Journal of Wildlife Diseases, 57(2), 2021. https://doi.org/10.7589/JWD-D-20-00034"
+  },
+  {
+    "objectID": "publications.html#section-3",
+    "href": "publications.html#section-3",
+    "title": "Publications",
+    "section": "2019",
+    "text": "2019\nKayla M. Kauffman. Expanding the knowledge of the epidemiology of Adenovirus Hemorrhagic Disease: Deer atadenovirus A genotype distribution in Western North America and dam to offspring transmission (Master’s Thesis). University of Wyoming. Presented 7 July 2019. Published 16 Aug 2019. Proquest (22620093)."
+  },
+  {
+    "objectID": "publications.html#section-4",
+    "href": "publications.html#section-4",
+    "title": "Publications",
+    "section": "2018",
+    "text": "2018\nWhite M, Kauffman K, Lewis J, Miller R. 2018. Wild pigs breach farm fence through harvest time in southern San Joaquin Valley. Calif Agr 72(2):120-126. &lt;https://doi.org/10.3733/ca.2018a0017&gt;"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "Leptospirosis is a globally distributed disease, which disproportionately affects impoverished communities such as subsistence farmers. Humans are most commonly exposed to the Leptospira bacterium through contact with the urine of an infected animal, such as a dog or rat, either directly, or indirectly through contaminated water. During Leptospira outbreaks, a commonly recommended public health measure to prevent human infections is to vaccinate dogs, however, the efficacy of this measure has never been tested.\nDoes vaccinating dogs against Leptospira lower infection prevalence in humans and rats? To answer this question, we vaccinated &gt;75% of dogs living in a rural village in Madagascar against Leptospira, then monitored dogs, humans, and small mammals living in that village over the next year. I am also approaching this question from a theoretical standpoint using SIR and agent-based models to understand the mechanism by which the vaccination campaign impacted community- and individual-level prevalence of Leptospira infections.\nSee my ESA 2023 poster presentation on our initial finding here\n\n\n\n\nHow closely do “landscape of risk” metrics of human and domestic animal exposures map to realized risk (infections) in humans and other incidental hosts across a suite of parasites? How important are landscape level risk metrics versus environmental risk metrics in predicting realized risk in humans? Is quantifying the landscape of risk a useful metric for assessing spillover risk?\nTo answer these questions I am working across a suite of samples from small mammals, bats, domestic animals, and people living and working along a habitat degradation gradient in rural northeastern Madagascar. Habitat degradation alters the ecological communities and the pathogen pressure exerted by the transformed landscape, thus altering patterns multi-host parasite sharing. I use infection data and environmental trait to build models of “landscape-level” risk of these various habitat types, then overlay high-resolution GPS tracker data from people to quantify their exposure risk. Then use infection data from the same people to test if that risk translates into a higher probability of infection.\n\n\n\n\nAs part of the team effort to understand the ecological, social, and environmental determinants of disease in 3 communities in rural northeastern Madagascar, I build networks connecting people and animals to each other and their shared environments. The first results of this work were reported in Kauffman et. al, 2022 and Evans et. al, 2023 used these networks to simulated COVID-19 testing strategies in a resource-poor setting."
+  },
+  {
+    "objectID": "research.html#current-projects",
+    "href": "research.html#current-projects",
+    "title": "Research",
+    "section": "",
+    "text": "Leptospirosis is a globally distributed disease, which disproportionately affects impoverished communities such as subsistence farmers. Humans are most commonly exposed to the Leptospira bacterium through contact with the urine of an infected animal, such as a dog or rat, either directly, or indirectly through contaminated water. During Leptospira outbreaks, a commonly recommended public health measure to prevent human infections is to vaccinate dogs, however, the efficacy of this measure has never been tested.\nDoes vaccinating dogs against Leptospira lower infection prevalence in humans and rats? To answer this question, we vaccinated &gt;75% of dogs living in a rural village in Madagascar against Leptospira, then monitored dogs, humans, and small mammals living in that village over the next year. I am also approaching this question from a theoretical standpoint using SIR and agent-based models to understand the mechanism by which the vaccination campaign impacted community- and individual-level prevalence of Leptospira infections.\nSee my ESA 2023 poster presentation on our initial finding here\n\n\n\n\nHow closely do “landscape of risk” metrics of human and domestic animal exposures map to realized risk (infections) in humans and other incidental hosts across a suite of parasites? How important are landscape level risk metrics versus environmental risk metrics in predicting realized risk in humans? Is quantifying the landscape of risk a useful metric for assessing spillover risk?\nTo answer these questions I am working across a suite of samples from small mammals, bats, domestic animals, and people living and working along a habitat degradation gradient in rural northeastern Madagascar. Habitat degradation alters the ecological communities and the pathogen pressure exerted by the transformed landscape, thus altering patterns multi-host parasite sharing. I use infection data and environmental trait to build models of “landscape-level” risk of these various habitat types, then overlay high-resolution GPS tracker data from people to quantify their exposure risk. Then use infection data from the same people to test if that risk translates into a higher probability of infection.\n\n\n\n\nAs part of the team effort to understand the ecological, social, and environmental determinants of disease in 3 communities in rural northeastern Madagascar, I build networks connecting people and animals to each other and their shared environments. The first results of this work were reported in Kauffman et. al, 2022 and Evans et. al, 2023 used these networks to simulated COVID-19 testing strategies in a resource-poor setting."
+  },
+  {
+    "objectID": "research.html#past-projects",
+    "href": "research.html#past-projects",
+    "title": "Research",
+    "section": "Past Projects",
+    "text": "Past Projects\n\nMaster’s Thesis\nMy Master’s thesis was on Adenovirus Hemorrahagic Disease which infects deer, elk, and moose in the Western United States. I used archeived samples to compare the distributions of genotypes of this virus across its range, as a first step towards explaining the observed differences in disease severity. I also studied maternal transmission of the virus in mule deer, to further our understanding of how the virus is maintained in a population and its potential impacts on neonates (Kauffman et. al, 2020)."
   }
 ]

@@ -11,7 +11,7 @@ title: "About"
 | University of California, Santa Barbara
 | [Young Lab](https://young-lab.eemb.ucsb.edu/)
 
-[link to ESA 2023 poster](publications.qmd# ESA poster 2023)
+[link to ESA 2023 poster](publications.qmd#%20ESA%20poster%202023)
 
 ## Research Interests
 

@@ -1,0 +1,7 @@
+---
+title: ""
+---
+
+![](qr-code.png){fig-align="left"}
+
+https://kmkauffm.github.io/

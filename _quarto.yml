@@ -6,6 +6,7 @@ website:
   title: "Kayla Kauffman"
   navbar:
     background: primary
+    search: false
     left:
       - text: "About"
         file: index.qmd
@@ -21,10 +22,14 @@ website:
       - icon: envelope
         text: Email
         href: mailto:kaylakauffman@ucsb.edu
+      - icon: share
+        text: qrcode
+        href: qrcode.qmd
         
     page-navigation: true
-    page-footer: "Copyright 2023, Kayla Kauffman"
     email-obfuscation: javascript
+    
+  page-footer: "Copyright 2023, Kayla Kauffman"
 
 format:
   html:

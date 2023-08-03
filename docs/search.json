@@ -4,7 +4,7 @@
     "href": "index.html#kayla-kauffman",
     "title": "About",
     "section": "Kayla Kauffman",
-    "text": "Kayla Kauffman\n(she/her)\nPhD Student\nUniversity of California, Santa Barbara\nYoung Lab\nlink to ESA 2023 poster"
+    "text": "Kayla Kauffman\n(she/her) \\\nPhD Student\nUniversity of California, Santa Barbara\nYoung Lab\nlink to ESA 2023 poster"
   },
   {
     "objectID": "index.html#research-interests",
@@ -25,7 +25,7 @@
     "href": "publications.html",
     "title": "Publications",
     "section": "",
-    "text": "Dog Leptospira Vaccination poster preview"
+    "text": "Dog Leptospira Vaccination - poster preview"
   },
   {
     "objectID": "publications.html#section",
@@ -82,5 +82,12 @@
     "title": "Research",
     "section": "Past Projects",
     "text": "Past Projects\n\nMaster’s Thesis\nMy Master’s thesis was on Adenovirus Hemorrahagic Disease which infects deer, elk, and moose in the Western United States. I used archeived samples to compare the distributions of genotypes of this virus across its range, as a first step towards explaining the observed differences in disease severity. I also studied maternal transmission of the virus in mule deer, to further our understanding of how the virus is maintained in a population and its potential impacts on neonates (Kauffman et. al, 2020)."
+  },
+  {
+    "objectID": "qrcode.html",
+    "href": "qrcode.html",
+    "title": "Kayla Kauffman",
+    "section": "",
+    "text": "https://kmkauffm.github.io/"
   }
 ]

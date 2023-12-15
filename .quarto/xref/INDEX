@@ -13,5 +13,11 @@
   },
   "qrcode.qmd": {
     "qrcode.html": "7b923fea"
+  },
+  "posts.qmd": {
+    "posts.html": "4ff5520e"
+  },
+  "posts/2023-11-29-realizedrisk/index.qmd": {
+    "index.html": "3fd51422"
   }
 }

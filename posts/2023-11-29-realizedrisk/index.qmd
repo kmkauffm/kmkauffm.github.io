@@ -1,0 +1,483 @@
+---
+title: "Simulation of Realized Infection Risk"
+description: "simulate a probability distribution of risk"
+author:
+  - name: Kayla Kauffman
+    url: https://https://kmkauffm.github.io/
+    orcid: 0000-0002-4897-9428
+date: 2023-11-29
+categories: [R, code, simulations] # self-defined categories
+citation: 
+  url: https://https://kmkauffm.github.io//posts/2023-11-29-realizedrisk/ 
+image: schema.png
+draft: true # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+---
+
+```{r}
+#| echo: false
+#| message: false
+
+library(spDataLarge)
+library(tidyverse)
+library(sf)
+library(terra)
+library(SiMRiv)
+library(patchwork)
+
+theme_set(theme_bw())
+theme_update(plot.title = element_text(hjust = 0.5))
+```
+
+## Background  
+Risk maps are used to describe the places where people (or animals) are most likely to be exposed to infectious disease. However, the time an individual spends in a place is not the only predictor of infection. The activity a person does in a location may influence if they are exposed to the disease, for example a person wearing shoes in an environment with a lot of soil transmitted helminths is at low infection risk because they are wearing shoes, thus not directly exposed to the contaminated soil. The person's immunity or susceptibility to an infection also influences their infection risk.  
+Before creating a model with real data mapping people's land use to their infection status I want to build a simulation of how I think the model will work. First, I want to compare people that infection probabilities in people "vibrating" in place (Brownian motion) and to people traversing the landscape in corridors (Levian motion). I'll then use this model to test how much susceptibility can vary before there is no correlation between the time people spend in risky places and their infection risk. *Asking: Do risk maps even work given individual heterogenetiy in susceptibility?*  
+
+## Make a Risk Map  
+
+Risk across the landscape likely has a lot of spatial autocorrelation and relates to underlying environmental features. Instead of simulating this, I am using the spDataLarge elevation raster data the Zion National Park area as the *risk map*.  
+
+```{r}
+riskmap <- rast(system.file("raster/srtm.tif", package = "spDataLarge"))
+
+## change into utm so easier to do the simulated tracks
+riskmap <- project(riskmap, "EPSG:26912")
+
+## make values [0,1]
+riskmap <- riskmap/2891.000
+
+## make resolution lower so things run quickly
+riskmap <- aggregate(riskmap, fact=5, fun="mean")
+
+## make square
+tmp <- vect(ext(riskmap)-5000, crs=crs(riskmap))
+riskmap <- crop(riskmap, tmp)
+
+## quick plot
+plot(riskmap)
+riskmap
+
+## find dimensions of area so can choose step lengths
+risk_bb <- ext(riskmap)
+# risk_bb[2]-risk_bb[1]
+# risk_bb[4]-risk_bb[3]
+## ~35km x 43km
+## make slightly smaller so indivdiuals not on edge
+risk_bb <- risk_bb + c(5000, -5000, 5000, -5000)
+
+## save cell size
+cell_size = res(riskmap)[1]
+
+## save crs
+crs_risk <- crs(riskmap)
+```
+
+## Simulate movement  
+https://cran.r-project.org/web/packages/SiMRiv/vignettes/SiMRiv.pdf
+
+### Brownian  
+Simulate vibrating, Brownian movement of individuals basically vibrating in place with each individuals' starting location distributed throughout the risk map area  
+
+```{r}
+## one type of movement with a random walk with step lengths relative 
+rand.walker <- species(state(concentration = 0, #random
+                             pwind = perceptualRange("gaussian", 1),
+                             steplen = 10,
+                             name = "tight_random"))
+
+## generate random starting points (might change to regular or increase n)
+### avoid edges
+aoi <- buffer(vect(ext(riskmap)),-2000)
+aoi <- crop(riskmap, aoi)
+
+start_coord <- spatSample(aoi, 
+                          100,
+                  method = "random",
+                  as.points = TRUE,
+                  values = F)
+plot(riskmap);points(start_coord)
+
+## need those as a nx2 matrix
+start_coord_mat <- as.matrix(as.data.frame(start_coord, geom="xy"))
+
+## simulate single state walks of 1000 steps
+sim.rw <- list()
+for (i in 1:100) {
+  tmp <- simulate(rand.walker, 1000,
+                   coords = start_coord_mat[i,])
+  sim.rw[[i]] <- cbind(tmp[,1], tmp[,2])
+}
+
+### make into vect
+sim.rw.sp1 <- lapply(sim.rw, vect, crs = crs_risk)
+## plot it
+# plot(sim.rw.sp[[1]])
+# plot(riskmap); lines(sim.rw[[1]])
+plot(riskmap); invisible(lapply(sim.rw, FUN = lines))
+```
+
+### Levian (Correlated Walks)  
+Need to make a resistance raster to get correlated walk
+```{r}
+#| message: false
+
+LevyWalker <- species(
+	(state.RW() * 100 + 10) + (state.CRW(0.97) * 500 + 50)
+, transitionMatrix(0.005, 0.001))
+
+## basemaps for resistance
+landcover <- resistanceFromShape(
+system.file("doc/landcover.shp", package="SiMRiv")
+, res = 50, field = "coverclass", mapvalues = c(
+"forest" = 0.5, "urban" = 1, "dam" = 0
+, "shrubland" = 0.75), background = 0.95)
+ 
+river.shape <- sf::st_read(system.file("doc/river-sample.shp", package="SiMRiv"))
+
+## resistence surface
+resistance <- resistanceFromShape(system.file("doc/river-sample.shp", package="SiMRiv"),
+                                       baseRaster = landcover,
+                                       buffer = 100, field = 0,
+                                       background = 0.95, margin = 3000)
+# buffer here is just some magical function to convert river
+# order into a meaningful value in the [0, 1] range!
+
+plot(resistance, axes = F)
+resistance
+
+## change that to be in the same spot as the riskmap
+new.resist <- rast(extent=ext(aoi),
+               nrow=dim(resistance)[1], ncol=dim(resistance)[2],
+               crs = crs_risk,
+               vals = values(resistance))
+new.resist <- aggregate(new.resist, fact = 10, fun = "mean", na.rm = TRUE)
+plot(new.resist)
+
+## new starting coords in areas of low resistance so don't get stuck
+init = xyFromCell(new.resist, sample(which(values(new.resist) <0.2), 100, replace=T))
+## simulate
+sim.rw2 <- list()
+for (i in 1:100) {
+  tmp <- simulate(LevyWalker, 1000,
+                  resist = raster(new.resist),
+                   coords = init[i,])
+  sim.rw2[[i]] <- cbind(tmp[,1], tmp[,2])
+}
+
+### make into vect
+sim.rw.sp2 <- lapply(sim.rw2, vect, crs = crs_risk)
+
+## plot it
+plot(riskmap); invisible(lapply(sim.rw2, FUN = lines))
+```
+
+## Homeranges  
+for each individual calculate homerange (KD) 
+```{r}
+## grid of study area
+tmp <- vect(ext(riskmap), crs=crs_risk)
+studygrid <- SpatialKDE::create_raster(st_as_sf(tmp),
+                                       cell_size = cell_size)
+## make points into sf
+sim1sf <- st_as_sf(sim.rw.sp2[[1]], geom="xy")
+
+## find kde
+kde <- SpatialKDE::kde(sim1sf, band_width = 10000, scaled = T, grid = studygrid)
+## crop to area where the individual was so not tiny
+kde.sm <- crop(kde, st_buffer(sim1sf, 2000))
+risk.sm <- crop(riskmap, st_buffer(sim1sf, 2000))
+
+## calculate risk
+kde.risk <- rast(kde.sm)*risk.sm
+
+## check in ball park
+sum(values(risk.sm))
+sum(values(rast(kde.sm)))
+sum(values(risk.sm)*values(rast(kde.sm)))
+sum(values(kde.risk))
+
+## plots to demo
+ggplot()+
+  tidyterra::geom_spatraster(data=risk.sm) +
+  scale_fill_viridis_c(option="A", direction = -1) +
+  labs(fill = "landscape risk")
+ggplot()+
+  tidyterra::geom_spatraster(data=rast(kde.sm)) +
+  scale_fill_viridis_c(option="A", direction = -1) +
+  labs(fill = "exposure")
+ggplot()+
+  tidyterra::geom_spatraster(data=kde.risk) +
+  scale_fill_viridis_c(option="A", direction = -1) +
+  labs(fill = "inf. probability")
+
+#### then redo on study grid so
+rm(tmp, studygrid, sim1sf, kde, kde.sm, risk.sm, kde.risk)
+```
+
+
+then multiply their homerange by the "risk" in each cell
+
+Put that in a function and run for everyone
+```{r}
+## make a function
+measure_risk <- function(X, riskmap){
+  ## grid of study area
+  tmp <- vect(ext(riskmap), crs=crs_risk)
+  studygrid <- SpatialKDE::create_raster(st_as_sf(tmp),
+                                         cell_size = cell_size)
+  ## make points into sf
+  sim1sf <- lapply(X, st_as_sf, geom="xy")
+  ## find kde
+  kde <- lapply(sim1sf, SpatialKDE::kde, band_width = 100, scaled = T, grid = studygrid)
+  ## convert Raster to SpatRast
+  kde <- lapply(kde, rast)
+  
+  ## multiply time in cell (kde) * cell's risk
+  new <- lapply(kde, function(i) i*riskmap)
+  ## sum of values in each layer are individual's risk
+  indiv_risk <- lapply(new, function(i) sum(values(i), na.rm=T))
+  
+  ## return a vector
+  unlist(indiv_risk)
+}
+```
+
+Find probabily of expsoure for each individual
+```{r}
+#| echo: false
+#| message: false
+## calculate individual risk for the brownian (1) and correlated (2)
+indiv_risk1 <- measure_risk(sim.rw.sp1, riskmap = riskmap)
+indiv_risk2 <- measure_risk(sim.rw.sp2, riskmap = riskmap)
+```
+
+Values in random walk 
+```{r}
+## look at some of the values
+indiv_risk1[1:10]
+range(indiv_risk1)
+```
+
+Values in corridor walk
+```{r}
+indiv_risk2[1:10]
+range(indiv_risk2)
+```
+
+## Assisgn susceptibility  
+individuals should have variable susceptiblity so that not everyone's probabilty of infection equals their sum
+```{r}
+susceptbility = runif(100, 0.4, 0.5)
+```
+dataframes for the 2 types of exposures
+```{r}
+rw_risk <- data.frame(
+  id = 100:199,
+  exp_risk = indiv_risk1,
+  susceptbility = susceptbility
+)
+
+cw_risk <- data.frame(
+  id = 100:199,
+  exp_risk = indiv_risk1,
+  susceptbility = susceptbility
+)
+```
+
+## trials   
+Compare probability of infection as a function of susceptibility alone (i.e. indiv stochasiticity; Null) to susceptibility * exposure risk (i.e. does adding info of exposure risk help)?? Not sure where I am going here....need to reread note on the origional idea
+```{r}
+#| message: false
+
+## random walk indiv's should just correlate with background (e_inf)
+rw_risk$s_inf <- rbinom(100, 1, rw_risk$susceptbility*mean(rw_risk$exp_risk))
+rw_risk$e_inf <- rbinom(100, 1, rw_risk$susceptbility*rw_risk$exp_risk)
+
+p1 <- ggplot(rw_risk) +
+  geom_point(aes(x=exp_risk, y=s_inf))+
+  geom_smooth(aes(x=exp_risk, y=s_inf, col="without risk"),
+              col="#619CFF",
+              se=F,
+              method="glm",
+              method.args=list(family="binomial")) +
+  labs(x="Exposure risk", y = "infection",
+       col=NULL,
+       title="Susceptibility only")
+
+p2 <- ggplot(rw_risk) +
+  geom_point(aes(x=exp_risk, y=e_inf))+
+  geom_smooth(aes(x=exp_risk, y=e_inf),
+              col="#F8766D",
+              se=F,
+              method="glm",
+              method.args=list(family="binomial")) +
+  labs(x="Exposure risk", y = "infection",
+       col=NULL,
+       title="Susceptibility * Risk")
+p3 <- ggplot(rw_risk) +
+  geom_smooth(aes(x=exp_risk, y=s_inf, col="without risk"),
+              se=F,
+              method="glm",
+              method.args=list(family="binomial")) +
+  geom_smooth(aes(x=exp_risk, y=e_inf, col="with risk"),
+              se=F,
+              method="glm",
+              method.args=list(family="binomial")) +
+  labs(x="Exposure risk", y = "infection",
+       col=NULL,
+       title="Comparison")
+
+((p1 | p2)/ p3) + plot_layout(guides = 'collect')
+```
+
+```{r}
+#| message: false
+
+## random walk indiv's should just correlate with background (e_inf)
+cw_risk$s_inf <- rbinom(100, 1, cw_risk$susceptbility*mean(cw_risk$exp_risk))
+cw_risk$e_inf <- rbinom(100, 1, cw_risk$susceptbility*cw_risk$exp_risk)
+
+p1 <- ggplot(cw_risk) +
+  geom_point(aes(x=exp_risk, y=s_inf))+
+  geom_smooth(aes(x=exp_risk, y=s_inf, col="without risk"),
+              col="#619CFF",
+              se=F,
+              method="glm",
+              method.args=list(family="binomial")) +
+  labs(x="Exposure risk", y = "infection",
+       col=NULL,
+       title="Susceptibility only")
+
+p2 <- ggplot(cw_risk) +
+  geom_point(aes(x=exp_risk, y=e_inf))+
+  geom_smooth(aes(x=exp_risk, y=e_inf),
+              col="#F8766D",
+              se=F,
+              method="glm",
+              method.args=list(family="binomial")) +
+  labs(x="Exposure risk", y = "infection",
+       col=NULL,
+       title="Susceptibility * Risk")
+p3 <- ggplot(cw_risk) +
+  geom_smooth(aes(x=exp_risk, y=s_inf, col="without risk"),
+              se=F,
+              method="glm",
+              method.args=list(family="binomial")) +
+  geom_smooth(aes(x=exp_risk, y=e_inf, col="with risk"),
+              se=F,
+              method="glm",
+              method.args=list(family="binomial")) +
+  labs(x="Exposure risk", y = "infection",
+       col=NULL,
+       title="Comparison")
+
+((p1 | p2)/ p3) + plot_layout(guides = 'collect')
+```
+
+### replicate that many times  
+```{r}
+trials <- 100
+```
+
+Brownian
+```{r}
+## random walk indiv's should just correlate with background (e_inf)
+s_inf <- replicate(trials, rbinom(100, 1, rw_risk$susceptbility*mean(rw_risk$exp_risk)))
+s_inf <- rowSums(s_inf)/trials
+range(s_inf)
+
+e_inf <- replicate(trials, rbinom(100, 1, rw_risk$susceptbility*rw_risk$exp_risk))
+e_inf <- rowSums(e_inf)/trials
+range(e_inf)
+
+rw_risk$s_inf <- s_inf
+rw_risk$e_inf <- e_inf
+
+p1 <- ggplot(rw_risk) +
+  geom_point(aes(x=exp_risk, y=s_inf))+
+  geom_smooth(aes(x=exp_risk, y=s_inf, col="without risk"),
+              col="#619CFF",
+              se=F,
+              method="glm") +
+  labs(x="Exposure risk", y = "infection",
+       col=NULL,
+       title="Susceptibility only")
+
+p2 <- ggplot(rw_risk) +
+  geom_point(aes(x=exp_risk, y=e_inf))+
+  geom_smooth(aes(x=exp_risk, y=e_inf),
+              col="#F8766D",
+              se=F,
+              method="glm") +
+  labs(x="Exposure risk", y = "infection",
+       col=NULL,
+       title="Susceptibility * Risk")
+p3 <- ggplot(rw_risk) +
+  geom_smooth(aes(x=exp_risk, y=s_inf, col="without risk"),
+              se=F,
+              method="glm") +
+  geom_smooth(aes(x=exp_risk, y=e_inf, col="with risk"),
+              se=F,
+              method="glm") +
+  labs(x="Exposure risk", y = "infection",
+       col=NULL,
+       title="Comparison")
+
+((p1 | p2)/ p3) + plot_layout(guides = 'collect')
+```
+
+Corridor 
+```{r}
+## random walk indiv's should just correlate with background (e_inf)
+s_inf <- replicate(trials, rbinom(100, 1, cw_risk$susceptbility*mean(cw_risk$exp_risk)))
+s_inf <- rowSums(s_inf)/trials
+range(s_inf)
+
+e_inf <- replicate(trials, rbinom(100, 1, cw_risk$susceptbility*cw_risk$exp_risk))
+e_inf <- rowSums(e_inf)/trials
+range(e_inf)
+
+cw_risk$s_inf <- s_inf
+cw_risk$e_inf <- e_inf
+
+p1 <- ggplot(cw_risk) +
+  geom_point(aes(x=exp_risk, y=s_inf))+
+  geom_smooth(aes(x=exp_risk, y=s_inf, col="without risk"),
+              col="#619CFF",
+              se=F,
+              method="glm") +
+  labs(x="Exposure risk", y = "infection",
+       col=NULL,
+       title="Susceptibility only")
+
+p2 <- ggplot(cw_risk) +
+  geom_point(aes(x=exp_risk, y=e_inf))+
+  geom_smooth(aes(x=exp_risk, y=e_inf),
+              col="#F8766D",
+              se=F,
+              method="glm") +
+  labs(x="Exposure risk", y = "infection",
+       col=NULL,
+       title="Susceptibility * Risk")
+p3 <- ggplot(cw_risk) +
+  geom_smooth(aes(x=exp_risk, y=s_inf, col="without risk"),
+              se=F,
+              method="glm") +
+  geom_smooth(aes(x=exp_risk, y=e_inf, col="with risk"),
+              se=F,
+              method="glm") +
+  labs(x="Exposure risk", y = "infection",
+       col=NULL,
+       title="Comparison")
+
+((p1 | p2)/ p3) + plot_layout(guides = 'collect')
+```
+
+compare the fit of the susceptibility * risk for the two types of walks
+```{r}
+m1 <- lm(e_inf ~ exp_risk, data=rw_risk)
+m2 <- lm(e_inf ~ exp_risk, data=cw_risk)
+
+summary(m1)$r.squared
+summary(m2)$r.squared
+```
+It is worse with more variability in movement (corridor walk) but this is to be expected.

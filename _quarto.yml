@@ -1,0 +1,43 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Kayla Kauffman"
+  navbar:
+    background: primary
+    search: false
+    left:
+      - text: "About"
+        file: index.qmd
+      - text: "Publications"
+        file: publications.qmd
+      - text: "Projects"
+        file: research.qmd 
+      - text: "Blog"
+        file: posts.qmd
+        
+    tools:
+      - icon: github
+        text: Github
+        href: https://github.com/kmkauffm
+      - icon: envelope
+        text: Email
+        href: mailto:kaylakauffman@ucsb.edu
+      - icon: share
+        text: qrcode
+        href: qrcode.qmd
+        
+    page-navigation: true
+    email-obfuscation: javascript
+    
+  page-footer: "Copyright 2023, Kayla Kauffman"
+
+format:
+  html:
+    theme: pulse
+    css: styles.css
+    toc: true
+
+editor: visual
+

@@ -1,0 +1,8 @@
+---
+title: "Blog"
+listing: 
+    contents: posts # all quarto docs in posts directory
+    type: default #grid is also nice
+    sort: "date desc"
+    categories: true
+---

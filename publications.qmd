@@ -2,9 +2,6 @@
 title: "Publications"
 ---
 
-# ESA poster 2023
-
-![Dog Leptospira Vaccination - poster preview](esa_poster.png){fig-align="center"}
 
 # Published works
 

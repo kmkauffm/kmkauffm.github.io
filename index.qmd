@@ -6,16 +6,14 @@ title: "About"
 
 ## Kayla Kauffman
 
-| (she/her) 
-| PhD Student 
-| University of California, Santa Barbara 
+| (she/her)
+| PhD Student
+| University of California, Santa Barbara
 | [Young Lab](https://young-lab.eemb.ucsb.edu/)
-
-[link to ESA 2023 poster](publications.qmd#%20ESA%20poster%202023)
 
 ## Research Interests
 
-Disease Ecology ⚬ One Health
+Community Ecology ⚬ Disease Ecology ⚬ One Health
 
 My academic interests lie at the intersection of wildlife, ecosystem, domestic animal, and human health. This intrigue is borne from my experiences learning about animal agriculture as an undergraduate, researching diseases of wildlife and natural resource management as a master's student, and independently traveling and volunteering in countries where zoonotic disease and deforestation are acute challenges. I am particularly focused on testing efforts to identify data-driven interventions to prevent or mitigate the spread of emerging or re-emerging zoonoses. I aim to become a leader in the intersectional field of [One Health](https://www.onehealthcommission.org/en/why_one_health/what_is_one_health/) by working to inform scientifically based low-cost solutions to neglected tropical diseases, particularly zoonotic diseases. A major part of my research involves applying perturbations or interventions to short-circuit disease transmission or emergence; I believe that there are many opportunities to deliver effective and efficient public health interventions that are rooted in healthy, functioning ecological systems. In my career, I aim to help close the implementation gap between theoretical and applied disease control measures by experimentally evaluating theoretical findings in real-world multi-host-pathogen systems.
 

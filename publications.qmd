@@ -2,19 +2,23 @@
 title: "Publications"
 ---
 
-# In preparation  
+# In-preparation  
 
 Kauffman, Kayla M. and Rajaonarivelo, Jeanne Arline and Rabeson, Sitraka and Rakotondramanana, Rijaniaina Tsiry and Maheriniaina, Randriamoria Toky and Randria, Rianja and Pender, Michelle and Soarimalala, Voahangy and Nunn, Charles L. and Tortosa, Pablo and Young, Hillary, Assessing the Cross-Species Effects of Dog Leptospira Vaccinations in Rural Northeastern Madagascar. <http://dx.doi.org/10.2139/ssrn.4719184>  
 
 Dubrulle J, Kauffman K, Soarimalala V, Randriamoria T, Goodman SM, Herrera J, Nunn C, Tortosa P. Effect of habitat degradation on hantavirus infection among introduced and endemic small mammals of Madagascar. bioRxiv [Preprint]. 2023 Dec 24:2023.12.24.573235. <https://doi.org/10.1101%2F2023.12.24.573235>  
 
-Carcauzon V, Herrera JP, Kaufman K, Baudino F, Wickenkamp N, Randriamoria TM, Soarimalala V, Goodman SM, Nunn SM, Lebarbenchon C, and Tortosa P. Astroviruses in terrestrial Malagasy mammals. PLOS Neglected Tropical Diseases. Accepted 2023.   
 
 # Published works  
 
+## 2024  
+
+Tyler Barrett, Georgia Titcomb, Mark Janko, Michelle Pender, Kayla Kauffman, Alma Solis, Toky Randriamoria, Hillary Young, Peter Mucha, James Moody, Randall Kramer, Voahangy Soarimalala, and Charles Nunn. Disentangling Social, Environmental, and Zoonotic Transmission Pathways of a Gastrointestinal Protozoan (Blastocystis spp.) in Northeast Madagascar. Submitted American Journal of Biological Anthropology. Accepted 2024.
+
+Carcauzon V, Herrera JP, Kaufman K, Baudino F, Wickenkamp N, Randriamoria TM, Soarimalala V, Goodman SM, Nunn SM, Lebarbenchon C, and Tortosa P. Astroviruses in terrestrial Malagasy mammals. PLOS Neglected Tropical Diseases. 2024. <https://doi.org/10.1371/journal.pntd.0012263>
+
 ## 2023
 
-\
 MV Evans, T Ramiadantsoa, K Kauffman, J Moody, C Nunn, JY Rabezara, P Raharimalala, TM Randriamoria, V Soarimalala, G Titcomb, A Garchitorena, and B Roche. 2023. Socio-demographic variables can guide prioritized testing strategies for epidemic control in resource-limited contexts. Journal of Infectious Diseases. <https://doi.org/10.1093/infdis/jiad076>
 
 ## 2022

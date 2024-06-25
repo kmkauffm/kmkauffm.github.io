@@ -12,7 +12,7 @@ Leptospirosis is a globally distributed disease, which disproportionately affect
 
 **Does vaccinating dogs against *Leptospira* lower infection prevalence in humans and rats?** To answer this question, we vaccinated \>75% of dogs living in a rural village in Madagascar against *Leptospira,* then monitored dogs, humans, and small mammals living in that village over the next year. I am also approaching this question from a theoretical standpoint using SIR and agent-based models to understand the mechanism by which the vaccination campaign impacted community- and individual-level prevalence of Leptospira infections.
 
-See my ESA 2023 poster presentation on our initial finding here
+See more about this work in my forthcoming [publication](publications.qmd#In-preparation).  
 
 ### Realization of zoonotic "landscape of risk" metrics into human infections
 

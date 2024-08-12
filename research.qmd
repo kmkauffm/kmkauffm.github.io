@@ -6,17 +6,17 @@ title: "Research"
 
 ### Manipulating multi-species *Leptospira* prevalence
 
-![](dog-2.jpg)
+![](dog-2.jpg){fig-align="center" width="450"}
 
 Leptospirosis is a globally distributed disease, which disproportionately affects impoverished communities such as subsistence farmers. Humans are most commonly exposed to the *Leptospira* bacterium through contact with the urine of an infected animal, such as a dog or rat, either directly, or indirectly through contaminated water. During *Leptospira* outbreaks, a commonly recommended public health measure to prevent human infections is to vaccinate dogs, however, the efficacy of this measure has never been tested.
 
 **Does vaccinating dogs against *Leptospira* lower infection prevalence in humans and rats?** To answer this question, we vaccinated \>75% of dogs living in a rural village in Madagascar against *Leptospira,* then monitored dogs, humans, and small mammals living in that village over the next year. I am also approaching this question from a theoretical standpoint using SIR and agent-based models to understand the mechanism by which the vaccination campaign impacted community- and individual-level prevalence of Leptospira infections.
 
-See more about this work in my forthcoming [publication](publications.qmd#In-preparation).  
+See more about this work in my forthcoming [publication](publications.qmd#In-preparation).
 
 ### Realization of zoonotic "landscape of risk" metrics into human infections
 
-![](ch3schema.png)
+![](ch3schema.png){fig-align="center" width="450"}
 
 How closely do "landscape of risk" metrics of human and domestic animal exposures map to realized risk (infections) in humans and other incidental hosts across a suite of parasites? How important are landscape level risk metrics versus environmental risk metrics in predicting realized risk in humans? Is quantifying the landscape of risk a useful metric for assessing spillover risk?
 
@@ -24,7 +24,7 @@ To answer these questions I am working across a suite of samples from small mamm
 
 ### Building networks of people, animals, and infections in northeastern Madagascar
 
-![](S1_colored_networks.png)
+![](S1_colored_networks.png){fig-align="center" width="600"}
 
 As part of the team effort to understand the ecological, social, and environmental determinants of disease in 3 communities in rural northeastern Madagascar, I build networks connecting people and animals to each other and their shared environments. The first results of this work were reported in [Kauffman et. al, 2022](publications.qmd#2022) and [Evans et. al, 2023](publications.qmd#2023) used these networks to simulated COVID-19 testing strategies in a resource-poor setting.
 

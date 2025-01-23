@@ -4,13 +4,12 @@ title: "About"
 
 ![](cover.jpeg){fig-align="center"}
 
-::: {.column-margin}
-**Kayla Kauffman**
-  (she/her)  
-  PhD Candidate, M.S.  
-  Ecology, Evolution, and Marine Biology  
-  University of California, Santa Barbara  
-  [Hillary Young Lab](https://young-lab.eemb.ucsb.edu/)  
+::: column-margin
+**Kayla Kauffman** (she/her)\
+PhD Candidate, M.S.\
+Ecology, Evolution, and Marine Biology\
+University of California, Santa Barbara\
+[Hillary Young Lab](https://young-lab.eemb.ucsb.edu/)
 :::
 
 ## Research Interests

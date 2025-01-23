@@ -20,15 +20,25 @@ See more about this work in my forthcoming [publication](publications.qmd#In-pre
 
 How closely do "landscape of risk" metrics of human and domestic animal exposures map to realized risk (infections) in humans and other incidental hosts across a suite of parasites? How important are landscape level risk metrics versus environmental risk metrics in predicting realized risk in humans? Is quantifying the landscape of risk a useful metric for assessing spillover risk?
 
-To answer these questions I am working across a suite of samples from small mammals, bats, domestic animals, and people living and working along a habitat degradation gradient in rural northeastern Madagascar. Habitat degradation alters the ecological communities and the pathogen pressure exerted by the transformed landscape, thus altering patterns multi-host parasite sharing. I use infection data and environmental trait to build models of "landscape-level" risk of these various habitat types, then overlay high-resolution GPS tracker data from people to quantify their exposure risk. Then use infection data from the same people to test if that risk translates into a higher probability of infection.
+To answer these questions I am working across a suite of samples from small mammals, domestic animals, and people living and working across a fragmented landscape in rural northeastern Madagascar. Human land use alters the ecological communities --- including which and how many parasites and infected hosts live there --- thus altering patterns multi-host parasite sharing.
+
+I use infection data and remotely sensed environmental data to build models of "landscape-level" risk of these various habitat types. Then use a combination of real and simulated human movement data to quantify exposure risk and test if that risk translates into a higher probability of infection.
+
+### Demographics and Land Use
+
+![Human use by land cover type in 3 study villages.](_site/demo_landuse.png){fig-alt="A google earth image of the area surrounding Marojejy National Park in northeastern Madagascar. Insets show the amount of human land use (shading) by cover type (color) in the area immediately surrounding each village." fig-align="center" width="500"}
+
+Understanding how sociodemographic factors influence people\'s movements across the landscape in rural agricultural settings is crucial to public health, food security, and livelihood resilience. However, these critical human-environment interactions are typically studied using survey data, which only weakly correspond to individuals' true movement patterns. We combined GPS-based methods from the field of movement ecology with traditional demographic survey-based approaches to investigate how demographic traits of rural Malagasy farmers vary with home range size (the size of the land area where people live and carry out routine livelihood activities) and the use of different land cover types.
+
+We found striking differences by gender and socioeconomic status between land cover types, with women spending more time in the village, men of lower socioeconomic status spending more time in crop fields, and men of higher socioeconomic status spending more time in secondary forest. Our findings reveal strong connections between socio-demographic variables and movement patterns, which are important for developing sustainable solutions to prevent deforestation, protect individual health, increase food security, and improve livelihood resilience.
+
+## Past Projects
 
 ### Building networks of people, animals, and infections in northeastern Madagascar
 
 ![](S1_colored_networks.png){fig-align="center" width="600"}
 
 As part of the team effort to understand the ecological, social, and environmental determinants of disease in 3 communities in rural northeastern Madagascar, I build networks connecting people and animals to each other and their shared environments. The first results of this work were reported in [Kauffman et. al, 2022](publications.qmd#2022) and [Evans et. al, 2023](publications.qmd#2023) used these networks to simulated COVID-19 testing strategies in a resource-poor setting.
-
-## Past Projects
 
 ### Master's Thesis
 

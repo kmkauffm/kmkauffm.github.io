@@ -14,8 +14,6 @@ website:
         file: publications.qmd
       - text: "Projects"
         file: research.qmd 
-      - text: "Blog"
-        file: posts.qmd
         
     tools:
       - icon: github

@@ -1,0 +1,527 @@
+---
+title: "Simulate correlated movement"
+description: "Simulating animal movement with correlated walks due to landscape resistance."
+author:
+  - name: Kayla Kauffman
+    url: https://https://kmkauffm.github.io/
+    orcid: 0000-0002-4897-9428
+format:
+  html:
+    toc: true
+    toc-location: left
+    message: false
+    warning: false
+    code-fold: false
+    code-tools: true
+    theme: sandstone
+date: 2024-02-14
+categories: [R, code, networks] # self-defined categories
+image: corr_random_walk.png
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+---
+
+```{r}
+#| echo: false
+#| message: false
+
+library(tidyverse)
+library(terra)
+```
+
+## Introduction
+
+Animal movement is complex to simulate because each step is correlated with the previous step. Simulating movement for a population of animals is further complicated because movements can be correlated, meaning animals follow paths, and the landscape might have resistance (e.g. step hillsides that are difficult to walk along). The idea to simulate walks with resistance largely stems from the defunct rpackage `SimRiv`.
+
+## Simple movements
+
+The start to the more complex animal movements is based off of a Levy-like walk.
+
+```{r}
+walk_levy <- function(ts=1000, mu = 2, x0=c(0,0)){
+  ## ts = number of relocations
+  ## mu = exponent of levy distribution (impacts step length)
+  ## x0 = starting location
+  
+  n = ts
+  
+  ## set up turning angles
+  ang <- runif(n - 1, -pi, pi)
+  ang = cumsum(c(runif(1, 0, 2 * pi), ang))
+  
+  ## starting location
+  si = x0[1]
+  co = x0[2]
+  
+  for (i in 2:n) {
+    
+    ## step length
+    v = 1 * (runif(1)^(1/(1 - mu)))
+    
+    ## propose a new location
+    si1 = si[i-1]+cumsum(v * sin(ang[i]))
+    co1 = co[i-1]+cumsum(v * cos(ang[i]))
+    
+    ## update location
+    si = c(si, si1)
+    co = c(co, co1)
+  }
+  ## return
+  vect(cbind(si,co), "lines")
+}
+
+## default levy
+trial <- walk_levy(ts=1000, mu = 2, x0=c(0,0))
+plot(trial, main = "Default Levy");points(trial)
+
+## shorten step length with mu
+trial <- walk_levy(ts=1000, mu = 0.5, x0=c(0,0))
+plot(trial, main = "Shortened steps Levy");points(trial)
+```
+
+The next step is to add correlation to the turning angles.
+
+```{r}
+walk_corr <- function(ts=1000, mu = 2, r = 0, x0=c(0,0)){
+  ## ts = number of relocations
+  ## mu = exponent of levy distribution (impacts step length)
+  ## r = The concentration parameter for wrapped normal distribution of turning angles (0=random, 1=straight line)
+  ## x0 = starting location
+  
+  n = ts
+  
+  ## set up turning angles --- UPDATED THIS PART
+  ang <- CircStats::rwrpnorm(n-1, 0, r)
+  ang = cumsum(c(runif(1, 0, 2 * pi), ang))
+  
+  ## starting location
+  si = x0[1]
+  co = x0[2]
+  
+  for (i in 2:n) {
+    
+    ## step length
+    v = 1 * (runif(1)^(1/(1 - mu)))
+    
+    ## propose a new location
+    si1 = si[i-1]+cumsum(v * sin(ang[i]))
+    co1 = co[i-1]+cumsum(v * cos(ang[i]))
+    
+    ## update location
+    si = c(si, si1)
+    co = c(co, co1)
+  }
+  ## return
+  vect(cbind(si,co), "lines")
+}
+
+## default random
+trial <- walk_corr(ts=1000, mu = 2, r = 0, x0=c(0,0))
+plot(trial, main = "Completely Random Walk");points(trial)
+
+## completely straight
+trial <- walk_corr(ts=100, mu = 2, r = 1, x0=c(0,0))
+plot(trial, main = "Completely Correlated Walk");points(trial)
+
+## correlated random walk
+trial <- walk_corr(ts=1000, mu = 2, r = 0.9, x0=c(0,0))
+plot(trial, main = "Correlated Random Walk");points(trial)
+```
+
+Then add correlation to the step lengths
+
+```{r}
+walk_corr <- function(ts=1000, mu = 2, r = 0, x0=c(0,0)){
+  ## ts = number of relocations
+  ## mu = exponent of levy distribution (impacts step length)
+  ## r = The concentration parameter for wrapped normal distribution of turning angles (0=random, 1=straight line)
+  ## x0 = starting location
+  
+  n = ts
+  
+  ## set up turning angles
+  ang <- CircStats::rwrpnorm(n-1, 0, r)
+  ang = cumsum(c(runif(1, 0, 2 * pi), ang))
+  
+  ## starting step length ## --- UPDATED THIS PART
+  v = mu
+  
+  ## starting location
+  si = x0[1]
+  co = x0[2]
+  
+  for (i in 2:n) {
+    
+    ## step length
+    v = rweibull(1, shape =  1, scale = v)+1 ## --- UPDATED THIS PART
+    
+    ## propose a new location
+    si1 = si[i-1]+cumsum(v * sin(ang[i]))
+    co1 = co[i-1]+cumsum(v * cos(ang[i]))
+    
+    ## update location
+    si = c(si, si1)
+    co = c(co, co1)
+  }
+  ## return
+  vect(cbind(si,co), "lines")
+}
+
+## default completely random angle
+trial <- walk_corr(ts=1000, mu = 2, r = 0, x0=c(0,0))
+plot(trial, main = "Correlated Random walk with Correlated Movement")
+```
+
+The last step, which became clear later, was to keep the simulated individuals in the area of interest, the easiest way to do this is using the extent of the resistance raster.
+
+```{r}
+walk_levy <- function(ts=1000, mu = 2, x0=c(0,0),
+                      resistance){
+  ## ts = number of relocations
+  ## mu = exponent of levy distribution (impacts step length)
+  ## x0 = starting location
+  ## resistance = rast
+  
+  n = ts
+  
+  ## set up turning angles
+  ang <- runif(n - 1, -pi, pi)
+  ang = cumsum(c(runif(1, 0, 2 * pi), ang))
+  
+  ## starting location
+  si = x0[1]
+  co = x0[2]
+  
+  for (i in 2:n) {
+    
+    ## step length
+    v = 1 * (runif(1)^(1/(1 - mu)))
+    
+    ## propose a new location
+    si1 = si[i-1]+cumsum(v * sin(ang[i]))
+    co1 = co[i-1]+cumsum(v * cos(ang[i]))
+    
+    ##check in bounds ## --- UPDATED THIS PART
+    if (si1 < 0 | si1 > ext(resistance)[2] |
+        co1 < 0 | co1 > ext(resistance)[4] ) {
+      
+      ## don't move if outside bounds
+      si1 = si[i-1]
+      co1 = co[i-1]
+      
+    } 
+    
+    ## update location
+    si = c(si, si1)
+    co = c(co, co1)
+  }
+  ## return
+  vect(cbind(si,co), "lines")
+}
+
+
+walk_corr <- function(ts=1000, mu = 2, r = 0, x0=c(0,0),
+                      resistance){
+  ## ts = number of relocations
+  ## mu = exponent of levy distribution (impacts step length)
+  ## r = The concentration parameter for wrapped normal distribution of turning angles (0=random, 1=straight line)
+  ## x0 = starting location
+  ## resistance = rast
+  
+  n = ts
+  
+  ## set up turning angles
+  ang <- CircStats::rwrpnorm(n-1, 0, r)
+  ang = cumsum(c(runif(1, 0, 2 * pi), ang))
+  
+  ## starting step length
+  v = mu
+  
+  ## starting location
+  si = x0[1]
+  co = x0[2]
+  
+  for (i in 2:n) {
+    
+    ## step length
+    v = rweibull(1, shape =  1, scale = v)+1
+     
+    ## propose a new location
+    si1 = si[i-1]+cumsum(v * sin(ang[i]))
+    co1 = co[i-1]+cumsum(v * cos(ang[i]))
+    
+    ##check in bounds ## --- UPDATED THIS PART
+    if (si1 < 0 | si1 > ext(resistance)[2] |
+        co1 < 0 | co1 > ext(resistance)[4] ) {
+      
+      ## don't move if outside bounds
+      si1 = si[i-1]
+      co1 = co[i-1]
+      
+    } 
+    
+    ## update location
+    si = c(si, si1)
+    co = c(co, co1)
+  }
+  ## return
+  vect(cbind(si,co), "lines")
+}
+## resistance raster ( with no resistance added)
+r <- rast(extent = c(xmin = 0, xmax = 1000, ymax = 0, ymin = 1000),
+          resolution = 1)
+
+## default levy
+trial <- walk_levy(ts=1000, mu = 2, x0=c(500,500),
+                   resistance = r)
+plot(ext(r), main="No edge Default Levy");lines(trial);points(trial)
+
+## correlated random
+trial <- walk_corr(ts=1000, mu = 2, r = 0.9, x0=c(500,500),
+                      resistance = r)
+plot(ext(r), main = "No edge Correlated Random");lines(trial);points(trial)
+
+```
+
+## Resistance raster
+
+Resistance could be any features scaled \[0,1\]. For example the slope of an area with steep places \~1 and flat, easy to move places \~0. Paths should have the least resistance so that animals preferentially move along the path.
+
+```{r}
+## use a seed so get repeatable landscape
+set.seed(567)
+
+### empty raster of study area
+r <- rast(extent = c(xmin = 0, xmax = 1000, ymax = 0, ymin = 1000),
+          resolution = 1)
+
+## slightly smaller raster for paths to fall inside of
+r2 <- rast(extent = c(xmin = 100, xmax = 900, ymax = 100, ymin = 900),
+          resolution = 1)
+
+## make paths because walks will follow paths
+p1 <- walk_corr(ts=500, mu = 5, r = 0.99, x0=c(500,500), resistance = r2)
+p2 <- walk_corr(ts=500, mu = 5, r = 0.95, x0=c(500,500), resistance = r2)
+p3 <- walk_levy(ts=100, mu = 2, x0=c(500,500), resistance = r2)
+
+resistanceshape <- union(p1, p2)
+resistanceshape <- union(resistanceshape, p3)
+resistanceshape <- buffer(resistanceshape, 20)
+plot(ext(r), main = "Walking paths");lines(resistanceshape)
+rm(r2, p1, p2, p3)
+
+## add central area with low resistence
+cent <- centroids(resistanceshape, inside=T) %>% 
+  buffer(50)
+plot(ext(r), main = "Walking paths with center points");lines(resistanceshape);lines(cent, col="red")
+
+## build resistance raster using the paths
+terra::values(r) <- NA
+res_rast <- rasterize(resistanceshape, r)
+res_rast <- distance(res_rast)
+
+## make the low friction paths narrower
+res_rast <- sqrt(res_rast)
+
+## add the central areas with no resistance
+cent <- rasterize(cent, r)
+res_rast[cent==1] = 0
+
+## scale [0,1]
+terra::values(res_rast) <- terra::values(res_rast)/max(terra::values(res_rast))
+
+## plot it
+plot(res_rast, main = "Resistance map", col=hcl.colors(50, palette = "Reds", rev = T))
+
+rm(resistanceshape, r, cent)
+```
+
+## Movement with landscape resistance
+
+Now update the walk functions again so that downhill steps always happen and uphillsteps have a low probability of occuring.
+
+```{r}
+walk_levy_resistance <- function(ts=1000, mu = 2, x0=c(0,0),
+                      resistance){
+  ## ts = number of relocations
+  ## mu = exponent of levy distribution (impacts step length)
+  ## x0 = starting location
+  ## resistance = rast
+  
+  n = ts
+  
+  ## set up turning angles
+  ang <- runif(n - 1, -pi, pi)
+  ang = cumsum(c(runif(1, 0, 2 * pi), ang))
+  
+  ## starting location
+  si = x0[1]
+  co = x0[2]
+  
+  ## track resistance at each location ## --- UPDATED THIS PART
+  res = terra::extract(resistance, rbind(c(si, co)))[[1]] 
+  
+  for (i in 2:n) {
+    
+    ## step length
+    v = 1 * (runif(1)^(1/(1 - mu)))
+    
+    ## propose a new location
+    si1 = si[i-1]+cumsum(v * sin(ang[i]))
+    co1 = co[i-1]+cumsum(v * cos(ang[i]))
+    
+    ##check in bounds 
+    if (si1 < 0 | si1 > ext(resistance)[2] |
+        co1 < 0 | co1 > ext(resistance)[4] ) {
+      
+      ## don't move if outside bounds
+      si1 = si[i-1]
+      co1 = co[i-1]
+      res1 = res[i-1]
+      
+    } else { ## --- UPDATED THIS PART
+      
+      ## resistance @ location
+      res1 = terra::extract(resistance, rbind(c(si1, co1)))[[1]]
+      
+      ##small probability move regardless of resistance
+      pmove = rbinom(1, 1, 0.25) == 1 # move about 25% of time
+      
+      ## don't move if res==1
+      if (res1 == 1 | is.na(res1)) {
+        si1 = si[i-1]
+        co1 = co[i-1]
+        res1 = res[i-1]
+        
+        ## move if resistance at new location lower or move anyways
+      } else if (res1 <= res[i-1] | pmove) {
+        si1 = si1
+        co1 = co1
+        res1 = res1
+        
+        ## otherwise stay at current location
+      } else {
+        si1 = si[i-1]
+        co1 = co[i-1]
+        res1 = res[i-1]
+        
+      }
+      
+    } ## --- End update
+    
+    ## update location
+    si = c(si, si1)
+    co = c(co, co1)
+    res = c(res, res1)
+  }
+  ## return
+  vect(cbind(si,co), "lines")
+}
+
+trial_res <- walk_levy_resistance(ts=1000, mu = 2, x0=c(500,500),
+                      resistance=res_rast)
+trial_nores <- walk_levy(ts=1000, mu = 2, x0=c(500,500),
+                      resistance=res_rast)
+
+plot(res_rast, col=hcl.colors(50, palette = "Reds", rev = T),
+     main = "Levy with (black) and \n without (grey) resistance");
+lines(trial_res, col="black");lines(trial_nores, col="grey")
+```
+
+```{r}
+walk_corr_resistance <- function(ts=1000, mu = 2, r = 0, x0=c(0,0),
+                      resistance){
+  ## ts = number of relocations
+  ## mu = exponent of levy distribution (impacts step length)
+  ## r = The concentration parameter for wrapped normal distribution of turning angles (0=random, 1=straight line)
+  ## x0 = starting location
+  ## resistance = rast
+  
+  n = ts
+  
+  ## set up turning angles
+  ang <- CircStats::rwrpnorm(n-1, 0, r)
+  ang = cumsum(c(runif(1, 0, 2 * pi), ang))
+  
+  ## starting step length
+  v = mu
+  
+  ## starting location
+  si = x0[1]
+  co = x0[2]
+  
+  ## track resistance at each location ## --- UPDATED THIS PART
+  res = terra::extract(resistance, rbind(c(si, co)))[[1]] 
+  
+  for (i in 2:n) {
+    
+    ## step length
+    v = rweibull(1, shape =  1, scale = v)+1
+     
+    ## propose a new location
+    si1 = si[i-1]+cumsum(v * sin(ang[i]))
+    co1 = co[i-1]+cumsum(v * cos(ang[i]))
+    
+    ##check in bounds 
+    if (si1 < 0 | si1 > ext(resistance)[2] |
+        co1 < 0 | co1 > ext(resistance)[4] ) {
+      
+      ## don't move if outside bounds
+      si1 = si[i-1]
+      co1 = co[i-1]
+      
+    } else { ## --- UPDATED THIS PART
+      
+      ## resistance @ location
+      res1 = terra::extract(resistance, rbind(c(si1, co1)))[[1]]
+      
+      ##small probability move regardless of resistance
+      pmove = rbinom(1, 1, 0.01) == 1 # move about 25% of time
+      
+      ## don't move if res==1
+      if (res1 == 1 | is.na(res1)) {
+        si1 = si[i-1]
+        co1 = co[i-1]
+        res1 = res[i-1]
+        
+        ## move if resistance at new location lower or move anyways
+      } else if (res1 <= res[i-1] | pmove) {
+        si1 = si1
+        co1 = co1
+        res1 = res1
+        
+        ## otherwise stay at current location
+      } else {
+        si1 = si[i-1]
+        co1 = co[i-1]
+        res1 = res[i-1]
+        
+      }
+      
+    } ## --- End update
+    
+    ## update location
+    si = c(si, si1)
+    co = c(co, co1)
+    res = c(res, res1)
+  }
+  ## return
+  vect(cbind(si,co), "lines")
+}
+
+trial_res <- walk_corr_resistance(ts=1000, mu = 1.8, r=0.9,
+                                  x0=c(500,500),
+                      resistance=res_rast)
+trial_nores <- walk_corr(ts=1000, mu = 1.8, r=0.9,
+                         x0=c(500,500),
+                      resistance=res_rast)
+
+plot(res_rast, col=hcl.colors(50, palette = "Reds", rev = T),
+     main = "Correlated random with (black) \n and without (grey) resistance");
+lines(trial_res, col="black")#;lines(trial_nores, col="grey") 
+```
+
+### To do
+
+-   [ ] Remove longer steps so can't jump between paths\
+-   [ ] Add in running multiple sims at once
+-   [ ] Adjust cent areas vs track area movement?

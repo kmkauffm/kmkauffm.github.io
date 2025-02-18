@@ -1,0 +1,43 @@
+---
+title: "Comparing roles on Networks"
+description: "simulate a probability distribution of risk"
+author:
+  - name: Kayla Kauffman
+    url: https://https://kmkauffm.github.io/
+    orcid: 0000-0002-4897-9428
+format:
+  html:
+    toc: true
+    toc-location: left
+    message: false
+    warning: false
+    code-fold: false
+    code-tools: true
+    theme: sandstone
+date: 2024-02-14
+categories: [R, code, networks] # self-defined categories
+image: areal-figure.png
+draft: true # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+---
+
+```{r}
+#| echo: false
+#| message: false
+
+library(tidyverse)
+library(igraph)
+```
+
+## Introduction
+
+Networks consisting of nodes (e.g. individuals, species, places) and edges (e.g. the connections between nodes) are useful for understanding social role and modeling infectious disease transmission. Centrality is central to assigning roles on networks. There are TONS of centrality metrics, a few common ones, which I'll use here are:  
+
++ **degree:** The number of edges in/out/both for each node.  
++ **strength:** The sum of edge weights in/out/both for each node.  
++ **betweenness:** The bridge role of a node for forming the shortest path between other nodes.  
++ **eigenvector:** A metric of how connected a node is to other highly connected nodes.  
+
+## Data set up
+
+The website [https://networkrepository.com/](https://networkrepository.com/) has tons of publically avialble networks to play around with. I chose to use a network which connects baboons wearing proximity loggers
+

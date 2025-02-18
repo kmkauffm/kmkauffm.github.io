@@ -1,0 +1,14 @@
+{
+  "hash": "766708340701138a3f2ad8bdc8130a61",
+  "result": {
+    "markdown": "---\ntitle: \"Comparing roles on Networks\"\ndescription: \"simulate a probability distribution of risk\"\nauthor:\n  - name: Kayla Kauffman\n    url: https://https://kmkauffm.github.io/\n    orcid: 0000-0002-4897-9428\nformat:\n  html:\n    toc: true\n    toc-location: left\n    message: false\n    warning: false\n    code-fold: false\n    code-tools: true\n    theme: sandstone\ndate: 2024-02-14\ncategories: [R, code, networks] # self-defined categories\nimage: areal-figure.png\ndraft: true # setting this to `true` will prevent your post from appearing on your listing page until you're ready!\n---\n\n::: {.cell}\n\n:::\n\n\n## Introduction\n\nNetworks consisting of nodes (e.g. individuals, species, places) and edges (e.g. the connections between nodes) are useful for understanding social role and modeling infectious disease transmission. Centrality is central to assigning roles on networks. There are TONS of centrality metrics, a few common ones, which I'll use here are:  \n\n+ **degree:** The number of edges in/out/both for each node.  \n+ **strength:** The sum of edge weights in/out/both for each node.  \n+ **betweenness:** The bridge role of a node for forming the shortest path between other nodes.  \n+ **eigenvector:** A metric of how connected a node is to other highly connected nodes.  \n\n## Data set up\n\nThe website [https://networkrepository.com/](https://networkrepository.com/) has tons of publically avialble networks to play around with. I chose to use a network which connects baboons wearing proximity loggers\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

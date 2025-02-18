@@ -19,5 +19,20 @@
   },
   "posts/2023-11-29-realizedrisk/index.qmd": {
     "index.html": "3fd51422"
+  },
+  "posts/2024-04-09-arealmaps/index.qmd": {
+    "index.html": "2839c669"
+  },
+  "posts/network-comparisons/index.qmd": {
+    "index.html": "2f04fc07"
+  },
+  "posts/correlated-walks/index.qmd": {
+    "index.html": "7366635a"
+  },
+  "posts/2024-02-14-correlated-walks/index.qmd": {
+    "index.html": "77cda08e"
+  },
+  "posts/2025-02-17-network-comparisons/index.qmd": {
+    "index.html": "fac2d9ea"
   }
 }

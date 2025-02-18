@@ -2,6 +2,6 @@
 title: ""
 ---
 
-![](qr-code.png){fig-align="left"}
+![](qr-code.png)
 
 https://kmkauffm.github.io/

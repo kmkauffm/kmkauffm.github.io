@@ -4,6 +4,8 @@ title: "Research"
 
 ## Current Projects
 
+*As of March 2024*
+
 ### Manipulating multi-species *Leptospira* prevalence
 
 ![](dog-2.jpg){fig-align="center" width="450"}

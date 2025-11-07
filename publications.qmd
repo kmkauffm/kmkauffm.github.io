@@ -8,7 +8,7 @@ title: "Publications"
 
 [Kauffman, Kayla M.]{style="color:purple;"}, Michelle Pender, Jean Yves Rabezara, Prisca Rahary, Mark Janko, Tyler Barrett, Lev Kolinski, Maheriniaina Toky Randriamoria, Voahangy Soarimalala, James Moody, David Lopez-Carr, Randall Kramer, Georgia Titcomb, Charles Nunn. Demographic drivers of land use by smallholder farmers in Madagascar.
 
-[Kauffman, Kayla M.]{style="color:purple;"}, Georgia Titcomb, Mark Janko, Randriamoria Toky Maheriniaina, Michelle Pender, Voahangy Soarimalala, Peter Mucha, Hillary Young, Charles Nunn. Risk realization: Assessing fine-scale spatial predictions of zoonotic risk in rural Madagascar.
+[Kauffman, Kayla M.]{style="color:purple;"}, Georgia Titcomb, Mark Janko, Randriamoria Toky Maheriniaina, Michelle Pender, Voahangy Soarimalala, Peter Mucha, Hillary Young, Charles Nunn. Multihost parasite sharing between primary and secondary host species across a suite of parasites occurs near forest boundaries and where many infected primary hosts are found.
 
 Jeanne A. Rajaonarivelo, [Kauffman, Kayla M.]{style="color:purple;"}, Voahangy Soarimalala, Toky M. Randriamoria, James P. Herrera, Natalie Wickenkamp, Magali Turpin, Fiona Baudino, Steve M. Goodman, Charles L. Nunn, Pablo Tortosa. Effects of land use on *Leptospira* prevalence and transmission in Malagasy small mammals.
 
@@ -19,6 +19,8 @@ Georgia Titcomb, [Kayla Kauffman]{style="color:purple;"}, Tyler Barrett, Charles
 If you have trouble accessing any of these articles please email me and I will send you a pdf.
 
 ## 2025
+
+Solis A, Anaeme A, Titcomb G, Janko M, Rabezara JY, Barrett TM, [Kauffman, K]{style="color:purple;"}, Pender M, Soarimalala V, Kolinski L, Kramer R, Young H, Nunn CL. One Health Disparities and Blastocystis infection among smallholder farmers in northeastern Madagascar. PLOS Glob Public Health. 2025 Oct 13;5(10):e0005189. <https://doi.org/10.1371/journal.pgph.0005189>
 
 Dubrulle J\*, [Kauffman, K\*]{style="color:purple;"}, Soarimalala V, Randriamoria T, Goodman SM, Herrera J, Nunn C, Tortosa P. Effects of habitat degradation on Hantavirus infection among introduced and endemic small mammals of Madagascar. Ecology and Evolution. 2025. <https://doi.org/10.1002/ece3.70914> \* *co-first authors*
 

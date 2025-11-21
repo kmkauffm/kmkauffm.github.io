@@ -11,7 +11,7 @@
     "href": "index.html#research-interests",
     "title": "About",
     "section": "Research Interests",
-    "text": "Research Interests\nCommunity Ecology ⚬ Disease Ecology ⚬ One Health\nMy passion lies in the intersection of wildlife, domestic animal, and human health, particularly in the context of zoonotic diseases. Fueled by experiences in animal agriculture, wildlife disease research, and travel to regions facing deforestation and zoonotic threats, I’m dedicated to becoming a leader in the field of One Health.\nMy postdoctoral work is on schistosomiasis, a Neglected Tropical Disease infecting over 250 million people globally. I am working to develop win-win-win solutions for poverty, malnutrition, and disease sub-Saharan Africa using fish-rice co-aquaculture. Additionally, I am using theoretical and applied modeling approaches to assess schistosomiasis transmission risk in a changing work and test control strategies.\nMy Ph.D. research focused on pathogens found at the human-animal interface in the area surrounding Marojejy National Park in northeastern Madagascar. I used a combination of approaches – building transmission potential networks, testing interventions such as dog vaccinations, and employing theoretical models – to understand multi-host disease dynamics and design effective prevention strategies.\nThe two key topic addressed in my dissertation work were:\n\nThe environmental drivers of infectoin and multihost parasite sharing: What landscape and primary host features predict infection in primary host species and parasite sharing with secondary host species across a suite of hosts and parasites?\n\nThe efficacy of vaccinating a reservoir host to control multi-host species pathogens: How effective is vaccinating animal species that harbor zoonotic diseases (reservoir hosts) in controlling their spread to other species, including humans?\n\nUltimately, I believe in bridging the gap between theory and practice in disease control. By combining real-world data with theoretical frameworks, I aim to develop solutions that address neglected tropical diseases and emerging zoonotic threats, promoting healthy ecosystems and human well-being."
+    "text": "Research Interests\nCommunity Ecology ⚬ Disease Ecology ⚬ One Health\nMy passion lies in the intersection of wildlife, domestic animal, and human health, particularly in the context of zoonotic diseases. Fueled by experiences in animal agriculture, wildlife disease research, and travel to regions facing deforestation and zoonotic disease threats, I’m dedicated to becoming a leader in the field of One Health.\nMy postdoctoral work is on schistosomiasis, a Neglected Tropical Disease infecting over 250 million people globally. I am working to develop win-win-win solutions for poverty, malnutrition, and disease sub-Saharan Africa using fish-rice co-aquaculture. Additionally, I am using theoretical and applied modeling approaches to assess schistosomiasis transmission risk in a changing work and test control strategies.\nMy Ph.D. research focused on pathogens found at the human-animal interface in the area surrounding Marojejy National Park in northeastern Madagascar. I used a combination of approaches – building transmission potential networks, testing interventions such as dog vaccinations, and employing theoretical models – to understand multihost disease dynamics and design effective prevention strategies.\nThe two key topic addressed in my dissertation work were:\n\nThe environmental drivers of infection and multihost parasite sharing: What landscape and primary host features predict infection in primary host species and parasite sharing with secondary host species across a suite of hosts and parasites?\n\nThe efficacy of vaccinating a reservoir host to control multihost species pathogens: How effective is vaccinating animal species that harbor zoonotic diseases (reservoir hosts) in controlling their spread to other species, including humans?\n\nUltimately, I believe in bridging the gap between theory and practice in disease control. By combining real-world data with theoretical frameworks, I aim to develop solutions that address neglected tropical diseases and emerging zoonotic threats, promoting healthy ecosystems and human well-being."
   },
   {
     "objectID": "index.html#expertise-related-to-un-sustainable-development-goals",
@@ -67,7 +67,7 @@
     "href": "publications.html",
     "title": "Publications",
     "section": "",
-    "text": "Kauffman, Kayla M. and Rajaonarivelo, Jeanne Arline and Rabeson, Sitraka and Rakotondramanana, Rijaniaina Tsiry and Maheriniaina, Randriamoria Toky and Randria, Rianja and Pender, Michelle and Soarimalala, Voahangy and Nunn, Charles L. and Tortosa, Pablo and Young, Hillary, Assessing the Cross-Species Effects of Dog Leptospira Vaccinations in Rural Northeastern Madagascar.\nKauffman, Kayla M., Michelle Pender, Jean Yves Rabezara, Prisca Rahary, Mark Janko, Tyler Barrett, Lev Kolinski, Maheriniaina Toky Randriamoria, Voahangy Soarimalala, James Moody, David Lopez-Carr, Randall Kramer, Georgia Titcomb, Charles Nunn. Demographic drivers of land use by smallholder farmers in Madagascar.\nKauffman, Kayla M., Georgia Titcomb, Mark Janko, Randriamoria Toky Maheriniaina, Michelle Pender, Voahangy Soarimalala, Peter Mucha, Hillary Young, Charles Nunn. Multihost parasite sharing between primary and secondary host species across a suite of parasites occurs near forest boundaries and where many infected primary hosts are found.\nJeanne A. Rajaonarivelo, Kauffman, Kayla M., Voahangy Soarimalala, Toky M. Randriamoria, James P. Herrera, Natalie Wickenkamp, Magali Turpin, Fiona Baudino, Steve M. Goodman, Charles L. Nunn, Pablo Tortosa. Effects of land use on Leptospira prevalence and transmission in Malagasy small mammals.\nGeorgia Titcomb, Kayla Kauffman, Tyler Barrett, Charles L. Nunn. Movement and sociodemographic predictors of zoonotic and human hookworm infection."
+    "text": "Google scholar"
   },
   {
     "objectID": "publications.html#section",
@@ -250,5 +250,19 @@
     "title": "EEID 2025 - Hookworm poster",
     "section": "Poster",
     "text": "Poster"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "About",
+    "section": "",
+    "text": "::: column-margin Kayla Kauffman (she/her)\n::: column-margin Postdoctoral Scholar | De Leo Lab | Oceans, Doerr School of Sustainability |\nStanford University\nPhD | Hillary Young Lab | EEMB | University of California, Santa Barbara\nMS | Myrna Miller Lab | Vet Sci & Enviromental and Natural Resource Mgmt | University of Wyoming"
+  },
+  {
+    "objectID": "index.html#research-mentors",
+    "href": "index.html#research-mentors",
+    "title": "About",
+    "section": "Research Mentors",
+    "text": "Research Mentors\nGiulio De Leo\nOceans, Doerr School of Sustainability | Stanford University\nHillary Young\nEcology, Evolution, & Marine Biology | University of California, Santa Barbara\nCharlie Nunn\nEvolutionary Anthropology and Global Health | Duke University\nGeorgia Titcomb\nDepartment of Fish, Wildlife, & Conservation Biology | Colorado State Univeristy, Fort Collins\nMyrna Miller\nVirology in Dept. of Veterinary Sciences | University of Wyoming"
   }
 ]

@@ -27,6 +27,9 @@ website:
       - icon: share
         text: qrcode
         href: qrcode.qmd
+      - icon: linkedin
+        text: linkedin
+        href: www.linkedin.com/in/kaylakauffman
         
     page-navigation: true
     email-obfuscation: javascript

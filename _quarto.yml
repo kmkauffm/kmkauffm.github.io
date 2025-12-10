@@ -23,7 +23,7 @@ website:
         href: https://github.com/kmkauffm
       - icon: envelope
         text: Email
-        href: mailto:kaylakauffman@ucsb.edu
+        href: mailto:kmkauffm@stanford.edu
       - icon: share
         text: qrcode
         href: qrcode.qmd
@@ -41,6 +41,5 @@ format:
     theme: pulse
     css: styles.css
     toc: true
-
-editor: visual
+    link-external-newwindow: true
 

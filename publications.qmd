@@ -6,19 +6,23 @@ title: "Publications"
 
 # In-preparation
 
-[Kauffman, Kayla M.]{style="color:purple;"} and Rajaonarivelo, Jeanne Arline and Rabeson, Sitraka and Rakotondramanana, Rijaniaina Tsiry and Maheriniaina, Randriamoria Toky and Randria, Rianja and Pender, Michelle and Soarimalala, Voahangy and Nunn, Charles L. and Tortosa, Pablo and Young, Hillary, Assessing the Cross-Species Effects of Dog *Leptospira* Vaccinations in Rural Northeastern Madagascar.
-
-[Kauffman, Kayla M.]{style="color:purple;"}, Michelle Pender, Jean Yves Rabezara, Prisca Rahary, Mark Janko, Tyler Barrett, Lev Kolinski, Maheriniaina Toky Randriamoria, Voahangy Soarimalala, James Moody, David Lopez-Carr, Randall Kramer, Georgia Titcomb, Charles Nunn. Demographic drivers of land use by smallholder farmers in Madagascar.
-
 [Kauffman, Kayla M.]{style="color:purple;"}, Georgia Titcomb, Mark Janko, Randriamoria Toky Maheriniaina, Michelle Pender, Voahangy Soarimalala, Peter Mucha, Hillary Young, Charles Nunn. Multihost parasite sharing between primary and secondary host species across a suite of parasites occurs near forest boundaries and where many infected primary hosts are found.
 
-Jeanne A. Rajaonarivelo, [Kauffman, Kayla M.]{style="color:purple;"}, Voahangy Soarimalala, Toky M. Randriamoria, James P. Herrera, Natalie Wickenkamp, Magali Turpin, Fiona Baudino, Steve M. Goodman, Charles L. Nunn, Pablo Tortosa. Effects of land use on *Leptospira* prevalence and transmission in Malagasy small mammals.
-
 Georgia Titcomb, [Kayla Kauffman]{style="color:purple;"}, Tyler Barrett, Charles L. Nunn. Movement and sociodemographic predictors of zoonotic and human hookworm infection.
+
+[Kauffman, Kayla M.]{style="color:purple;"} and Rajaonarivelo, Jeanne Arline and Rabeson, Sitraka and Rakotondramanana, Rijaniaina Tsiry and Maheriniaina, Randriamoria Toky and Randria, Rianja and Pender, Michelle and Soarimalala, Voahangy and Nunn, Charles L. and Tortosa, Pablo and Young, Hillary, Assessing the Cross-Species Effects of Dog *Leptospira* Vaccinations in Rural Northeastern Madagascar.
 
 # Published works
 
 If you have trouble accessing any of these articles please email me and I will send you a pdf.
+
+## 2026
+
+[Kauffman, Kayla M.]{style="color:purple;"}, Michelle Pender; Jean Yves Rabezara; Prisca Rahary; Mark Janko; Tyler Barrett; Lev Kolinski; Maheriniaina Toky Randriamoria; Voahangy Soarimalala; James Moody; David Lopez-Carr; Randall Kramer; Georgia Titcomb; Charles Nunn. Sociodemographic characteristics predict land use patterns by farmers near a protected area in Madagascar. Scientific Reports. 2026. <https://doi.org/10.1038/s41598-026-40592-6>
+
+Camille M. DeSisto\*; Raquel A. Binder\*; [Kayla Kauffman]{style="color:purple;"}; Tyler Barrett; Michelle Pender; Randall Kramer; Voahangy Soarimalala; James Moody; Charles L. Nunn. Predictors of Centrality on Real World Human Transmission Networks in Rural Madagascar. PLoS Glob Public Health. 2026 6(1): e0005661. <https://doi.org/10.1371/journal.pgph.0005661>
+
+Jeanne A. Rajaonarivelo\*, [Kayla M. Kauffman\*]{style="color:purple;"}, Toky M. Randriamoria, James P. Herrera, Natalie Wickenkamp, Magali Turpin, Fiona Baudino, Hillary S. Young, Voahangy Soarimalala, Steven M. Goodman, Charles L. Nunn, Pablo Tortosa. Leptospira prevalence and lineages vary across land-use types due to shifts in small mammal communities. Applied Environmental Microbiology. 2026. e02061-25. <http://doi.org/10.1128/aem.02061-25>
 
 ## 2025
 

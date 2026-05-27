@@ -14,10 +14,9 @@ format:
     warning: false
     code-fold: false
     code-tools: true
-    theme: sandstone
 date: 2026-01-28
 categories: [presentations, Global Health Covening, land use change] # self-defined categories
-image: leptospira.png
+image: mus.svg
 draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
 ---
 

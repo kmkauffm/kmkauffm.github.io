@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Posts"
 listing: 
     contents: posts # all quarto docs in posts directory
     type: default #grid is also nice

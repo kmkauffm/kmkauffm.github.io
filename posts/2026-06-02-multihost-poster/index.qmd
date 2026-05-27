@@ -14,10 +14,9 @@ format:
     warning: false
     code-fold: false
     code-tools: true
-    theme: sandstone
 date: 2026-06-01
 categories: [presentations, EEID, parasite sharing] # self-defined categories
-image: pinkmouse.svg
+image: forestedge.png
 draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
 ---
 

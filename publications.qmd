@@ -24,6 +24,8 @@ Camille M. DeSisto\*; Raquel A. Binder\*; [Kayla Kauffman]{style="color:purple;"
 
 Jeanne A. Rajaonarivelo\*, [Kayla M. Kauffman\*]{style="color:purple;"}, Toky M. Randriamoria, James P. Herrera, Natalie Wickenkamp, Magali Turpin, Fiona Baudino, Hillary S. Young, Voahangy Soarimalala, Steven M. Goodman, Charles L. Nunn, Pablo Tortosa. Leptospira prevalence and lineages vary across land-use types due to shifts in small mammal communities. Applied Environmental Microbiology. 2026. e02061-25. <http://doi.org/10.1128/aem.02061-25>
 
+- AEM commentary: Changing landscapes, shifting reservoirs: land-use change and Leptospira ecology in Madagascar. <https://doi.org/10.1128/aem.00487-26>
+
 ## 2025
 
 Solis A, Anaeme A, Titcomb G, Janko M, Rabezara JY, Barrett TM, [Kauffman, K]{style="color:purple;"}, Pender M, Soarimalala V, Kolinski L, Kramer R, Young H, Nunn CL. One Health Disparities and Blastocystis infection among smallholder farmers in northeastern Madagascar. PLOS Glob Public Health. 2025 Oct 13;5(10):e0005189. <https://doi.org/10.1371/journal.pgph.0005189>

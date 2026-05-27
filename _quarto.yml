@@ -14,7 +14,7 @@ website:
         file: publications.qmd
       - text: "Projects"
         file: research.qmd 
-      - text: "Code posts"
+      - text: "Posts"
         file: posts.qmd
         
     tools:

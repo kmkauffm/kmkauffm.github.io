@@ -1,0 +1,39 @@
+---
+title: "EEID 2026 Poster - Multihost parasite sharing"
+subtitle: "Host habitat specialization determines where multihost parasite sharing occurs along forest-agriculture boundaries"
+description: "Kauffman et al, in prep"
+author:
+  - name: Kayla Kauffman
+    url: https://https://kmkauffm.github.io/
+    orcid: 0000-0002-4897-9428
+format:
+  html:
+    toc: true
+    toc-location: left
+    message: false
+    warning: false
+    code-fold: false
+    code-tools: true
+    theme: sandstone
+date: 2026-06-01
+categories: [presentations, EEID, parasite sharing] # self-defined categories
+image: pinkmouse.svg
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+---
+
+
+![](Multihost parasite sharing EEID 2026.png){fig-align="center"}
+
+## Authors
+
+Kayla M. Kauffman, Maheriniaina Toky Randriamoria, Rianja Randriamifidisoa, Jeanne A. Rajaonarivelo, Pablo Tortosa, Voahangy Soarimalala, Steven M. Goodman,  Peter J. Mucha, Charles L. Nunn, Hillary Young, Georgia Titcomb
+
+## Abstract
+
+Parasite sharing among wildlife species shapes biodiversity outcomes and offers broad insight into the mechanisms and geography of cross-species transmission. While spillover research often emphasizes zoonotic pathogens, transmission among wildlife hosts is widespread, tractable to study, and directly relevant to conservation. We combine parasite infection data with spatial analyses to test whether parasite sharing in a diverse community of endemic and invasive small mammals in Madagascar is associated with forest-agriculture boundaries. We define a “primary host” for each parasite as the host species in which the parasite is most frequently detected then all other infected host species as “secondary hosts”. We then predict where primary hosts and infected primary hosts are likely to occur using species distribution models, then evaluate where secondary hosts are likely to occur in regard to primary host occurrence and infection and distance to forst-agriculture boundaries. Guided by theory linking community assembly, contact structure, and transmission, we predict that spillover increases where primary and secondary hosts co-occur and is elevated at forest-agriculture boundaries where edge effects may increase interspecific contract rates and parasite diversity. Across host species and parasite taxa, we detect patterns consistent with edge-associated parasite sharing, but the relationship depends strongly on the level of secondary host habitat specialization. Thus revealing that multihost parasite sharing reflects interactions between landscape configuration and host ecological niches. These results indicate that habitat modification can restructure host overlap and parasite sharing, and that forecasting spillover requires combining edge effects with species-specific habitat associations. This framework can help identify permeable areas for cross-species transmission in wildlife communities and inform conservation planning and spillover risk assessment.
+
+
+## Key words
+
+Multihost parasites, Nematodes, environmental transmission, habitat boundaries, species distribution models
+

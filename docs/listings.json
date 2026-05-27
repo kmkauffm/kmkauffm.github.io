@@ -2,9 +2,12 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/2026-06-02-multihost-poster/index.html",
+      "/posts/2026-01-28-smlepto-poster/index.html",
       "/posts/2025-06-16-hookworm-poster/index.html",
       "/posts/2024-04-09-arealmaps/index.html",
       "/posts/2024-02-14-correlated-walks/index.html",
+      "/posts/2025-02-17-network-comparisons/index.html",
       "/posts/2023-11-29-realizedrisk/index.html"
     ]
   }

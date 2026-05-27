@@ -60,7 +60,7 @@
     "href": "posts.html",
     "title": "Blog",
     "section": "",
-    "text": "EEID 2025 - Hookworm poster\n\n\nMovement and sociodemographic predictors of zoonotic and human hookworm infection\n\n\n\n\npresentations\n\n\nEEID\n\n\nzoonotic disease\n\n\n\n\nTitcomb et al, in prep\n\n\n\n\n\n\nJun 16, 2025\n\n\nKayla Kauffman\n\n\n\n\n\n\n  \n\n\n\n\nMaps with Satelite Imagery\n\n\n\n\n\n\n\nR\n\n\ncode\n\n\nspatial\n\n\n\n\nMaking maps in R\n\n\n\n\n\n\nSep 4, 2024\n\n\nKayla Kauffman\n\n\n\n\n\n\n  \n\n\n\n\nSimulate correlated movement\n\n\n\n\n\n\n\nR\n\n\ncode\n\n\nnetworks\n\n\n\n\nSimulating animal movement with correlated walks due to landscape resistance.\n\n\n\n\n\n\nFeb 14, 2024\n\n\nKayla Kauffman\n\n\n\n\n\n\n  \n\n\n\n\nSimulation of Realized Infection Risk\n\n\n\n\n\n\n\nR\n\n\ncode\n\n\nsimulations\n\n\n\n\nsimulate a probability distribution of risk\n\n\n\n\n\n\nDec 15, 2023\n\n\nKayla Kauffman\n\n\n\n\n\n\nNo matching items"
+    "text": "EEID 2026 Poster - Multihost parasite sharing\n\n\nHost habitat specialization determines where multihost parasite sharing occurs along forest-agriculture boundaries\n\n\n\npresentations\n\nEEID\n\nparasite sharing\n\n\n\nKauffman et al, in prep\n\n\n\n\n\nJun 1, 2026\n\n\nKayla Kauffman\n\n\n\n\n\n\n\n\n\n\n\n\nStanford Global Health Covening - Leptospira poster\n\n\nLeptospira prevalence and lineages vary across land use types due to shifts in small mammal communities\n\n\n\npresentations\n\nGlobal Health Covening\n\nland use change\n\n\n\nRanjaonarivelo and Kauffman, et al. (2026) AEM.\n\n\n\n\n\nJan 28, 2026\n\n\nKayla Kauffman\n\n\n\n\n\n\n\n\n\n\n\n\nEEID 2025 - Hookworm poster\n\n\nMovement and sociodemographic predictors of zoonotic and human hookworm infection\n\n\n\npresentations\n\nEEID\n\nzoonotic disease\n\n\n\nTitcomb et al, in prep\n\n\n\n\n\nJun 16, 2025\n\n\nKayla Kauffman\n\n\n\n\n\n\n\n\n\n\n\n\nMaps with Satelite Imagery\n\n\n\n\n\n\nR\n\ncode\n\nspatial\n\n\n\nMaking maps in R\n\n\n\n\n\nSep 4, 2024\n\n\nKayla Kauffman\n\n\n\n\n\n\n\n\n\n\n\n\nSimulate correlated movement\n\n\n\n\n\n\nR\n\ncode\n\nnetworks\n\n\n\nSimulating animal movement with correlated walks due to landscape resistance.\n\n\n\n\n\nFeb 14, 2024\n\n\nKayla Kauffman\n\n\n\n\n\n\n\n\n\n\n\n\nComparing roles on Networks\n\n\n\n\n\n\nR\n\ncode\n\nnetworks\n\n\n\nsimulate a probability distribution of risk\n\n\n\n\n\nFeb 14, 2024\n\n\nKayla Kauffman\n\n\n\n\n\n\n\n\n\n\n\n\nSimulation of Realized Infection Risk\n\n\n\n\n\n\nR\n\ncode\n\nsimulations\n\n\n\nsimulate a probability distribution of risk\n\n\n\n\n\nDec 15, 2023\n\n\nKayla Kauffman\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "publications.html",
@@ -74,14 +74,14 @@
     "href": "publications.html#section",
     "title": "Publications",
     "section": "2026",
-    "text": "2026\nKauffman, Kayla M., Michelle Pender; Jean Yves Rabezara; Prisca Rahary; Mark Janko; Tyler Barrett; Lev Kolinski; Maheriniaina Toky Randriamoria; Voahangy Soarimalala; James Moody; David Lopez-Carr; Randall Kramer; Georgia Titcomb; Charles Nunn. Sociodemographic characteristics predict land use patterns by farmers near a protected area in Madagascar. Scientific Reports. 2026. https://doi.org/10.1038/s41598-026-40592-6\nCamille M. DeSisto*; Raquel A. Binder*; Kayla Kauffman; Tyler Barrett; Michelle Pender; Randall Kramer; Voahangy Soarimalala; James Moody; Charles L. Nunn. Predictors of Centrality on Real World Human Transmission Networks in Rural Madagascar. PLoS Glob Public Health. 2026 6(1): e0005661. https://doi.org/10.1371/journal.pgph.0005661\nJeanne A. Rajaonarivelo*, Kayla M. Kauffman*, Toky M. Randriamoria, James P. Herrera, Natalie Wickenkamp, Magali Turpin, Fiona Baudino, Hillary S. Young, Voahangy Soarimalala, Steven M. Goodman, Charles L. Nunn, Pablo Tortosa. Leptospira prevalence and lineages vary across land-use types due to shifts in small mammal communities. Applied Environmental Microbiology. 2026. e02061-25. http://doi.org/10.1128/aem.02061-25\n\nAEM commentary: Changing landscapes, shifting reservoirs: land-use change and Leptospira ecology in Madagascar. https://doi.org/10.1128/aem.00487-26"
+    "text": "2026\nKauffman, Kayla M., Michelle Pender; Jean Yves Rabezara; Prisca Rahary; Mark Janko; Tyler Barrett; Lev Kolinski; Maheriniaina Toky Randriamoria; Voahangy Soarimalala; James Moody; David Lopez-Carr; Randall Kramer; Georgia Titcomb; Charles Nunn. Sociodemographic characteristics predict land use patterns by farmers near a protected area in Madagascar. Scientific Reports. 2026. https://doi.org/10.1038/s41598-026-40592-6\nCamille M. DeSisto*; Raquel A. Binder*; Kayla Kauffman; Tyler Barrett; Michelle Pender; Randall Kramer; Voahangy Soarimalala; James Moody; Charles L. Nunn. Predictors of Centrality on Real World Human Transmission Networks in Rural Madagascar. PLoS Glob Public Health. 2026 6(1): e0005661. https://doi.org/10.1371/journal.pgph.0005661\nJeanne A. Rajaonarivelo*, Kayla M. Kauffman*, Toky M. Randriamoria, James P. Herrera, Natalie Wickenkamp, Magali Turpin, Fiona Baudino, Hillary S. Young, Voahangy Soarimalala, Steven M. Goodman, Charles L. Nunn, Pablo Tortosa. Leptospira prevalence and lineages vary across land-use types due to shifts in small mammal communities. Applied Environmental Microbiology. 2026. e02061-25. http://doi.org/10.1128/aem.02061-25\n\nAEM commentary: Changing landscapes, shifting reservoirs: land-use change and Leptospira ecology in Madagascar. https://doi.org/10.1128/aem.00487-26\nPoster presented at Stanford Global Health Convening 2026"
   },
   {
     "objectID": "publications.html#section-1",
     "href": "publications.html#section-1",
     "title": "Publications",
     "section": "2025",
-    "text": "2025\nSolis A, Anaeme A, Titcomb G, Janko M, Rabezara JY, Barrett TM, Kauffman, K, Pender M, Soarimalala V, Kolinski L, Kramer R, Young H, Nunn CL. One Health Disparities and Blastocystis infection among smallholder farmers in northeastern Madagascar. PLOS Glob Public Health. 2025 Oct 13;5(10):e0005189. https://doi.org/10.1371/journal.pgph.0005189\nDubrulle J*, Kauffman, K*, Soarimalala V, Randriamoria T, Goodman SM, Herrera J, Nunn C, Tortosa P. Effects of habitat degradation on Hantavirus infection among introduced and endemic small mammals of Madagascar. Ecology and Evolution. 2025. https://doi.org/10.1002/ece3.70914 * co-first authors\n\nPress releases: https://news.ucsb.edu/2025/021825/hantavirus-madagascar-linked-black-rats-agricultural-areas and https://researchblog.duke.edu/2025/04/08/forests-and-disease-risk-hantavirus-in-madagascar/"
+    "text": "2025\nSolis A, Anaeme A, Titcomb G, Janko M, Rabezara JY, Barrett TM, Kauffman, K, Pender M, Soarimalala V, Kolinski L, Kramer R, Young H, Nunn CL. One Health Disparities and Blastocystis infection among smallholder farmers in northeastern Madagascar. PLOS Glob Public Health. 2025 Oct 13;5(10):e0005189. https://doi.org/10.1371/journal.pgph.0005189\nDubrulle J*, Kauffman, K*, Soarimalala V, Randriamoria T, Goodman SM, Herrera J, Nunn C, Tortosa P. Effects of habitat degradation on Hantavirus infection among introduced and endemic small mammals of Madagascar. Ecology and Evolution. 2025. https://doi.org/10.1002/ece3.70914 * co-first authors\n\nPress releases: https://news.ucsb.edu/2025/021825/hantavirus-madagascar-linked-black-rats-agricultural-areas and https://researchblog.duke.edu/2025/04/08/forests-and-disease-risk-hantavirus-in-madagascar/\nPoster presented at EEID 2025"
   },
   {
     "objectID": "publications.html#section-2",
@@ -271,5 +271,75 @@
     "title": "Publications",
     "section": "2018",
     "text": "2018\nWhite M, Kauffman, K, Lewis J, Miller R. 2018. Wild pigs breach farm fence through harvest time in southern San Joaquin Valley. Calif Agr 72(2):120-126. https://doi.org/10.3733/ca.2018a0017"
+  },
+  {
+    "objectID": "posts/2025-smlepto-poster/index.html#authors",
+    "href": "posts/2025-smlepto-poster/index.html#authors",
+    "title": "EEID 2025 - Hookworm poster",
+    "section": "Authors",
+    "text": "Authors\nGeorgia Titcomb, Kayla Kauffman, Tyler Barrett, Randall Kramer, Peter Mucha, Michelle Pender, Jean Yves Rabezara, Prisca Rahary, M. Toky Randriamoria, Voahangy Soarimalala, Charles L. Nunn"
+  },
+  {
+    "objectID": "posts/2025-smlepto-poster/index.html#abstract",
+    "href": "posts/2025-smlepto-poster/index.html#abstract",
+    "title": "EEID 2025 - Hookworm poster",
+    "section": "Abstract",
+    "text": "Abstract\nHuman hookworm infections affect half a billion people worldwide, and are most common among those experiencing poverty. Previous research has focused on the sociodemographic correlates of hookworm infection, but not the locations and habitats where people are exposed to these environmentally transmitted parasites. Additionally, recent molecular research has revealed that multiple hookworm species with either humans or dogs as their definitive hosts infect people. Using GPS data loggers, we compared how infection with human-specific (Necator americanus) and zoonotic (Ancylostoma ceylanicum) hookworms relate to people’s sociodemographic variables, land use, and spatial co-occurrence with infected people and dogs. We found a high prevalence (52% of females and 69% of males; n = 881) of hookworm infection across three villages in northeastern Madagascar where our study was conducted. Necator americanus was the dominant hookworm species (53% prevalence), yet the zoonotic hookworm A. ceylanicum was also common (20% prevalence). Consistent with previous findings, N. americanus was more prevalent in males than females and individuals with less formal education. Secondary forest fragments, which provide favorable environmental conditions for hookworm survival, were “high risk” environments for exposure to N. americanus among people living in villages with more forest cover. However, in villages with less forest cover, a household transmission network better predicted infections. We did not find strong environmental predictors for infection with dog-transmitted A. ceylanicum. Instead, living in a village with greater dog ownership corresponded to a higher infection risk. Dog defecation patterns are more widespread in villages than human defecation patterns, and this difference may result in greater “homogeneity of risk” of the dog-transmitted hookworm. By jointly studying sociodemographic and movement-based predictors of hookworm infection, we provide more nuanced insights into the patterns and exposure risks for this archetypal disease – insights only possible with an interdisciplinary approach to studying the ecology of infectious diseases."
+  },
+  {
+    "objectID": "posts/2025-smlepto-poster/index.html#key-words",
+    "href": "posts/2025-smlepto-poster/index.html#key-words",
+    "title": "EEID 2025 - Hookworm poster",
+    "section": "Key words",
+    "text": "Key words\nHookworm, Transmission networks, environmental transmission, neglected tropical diseases, sociodemographic"
+  },
+  {
+    "objectID": "posts/2026-06-02-multihost-poster/index.html#authors",
+    "href": "posts/2026-06-02-multihost-poster/index.html#authors",
+    "title": "EEID 2026 Poster - Multihost parasite sharing",
+    "section": "Authors",
+    "text": "Authors\nKayla M. Kauffman, Maheriniaina Toky Randriamoria, Rianja Randriamifidisoa, Jeanne A. Rajaonarivelo, Pablo Tortosa, Voahangy Soarimalala, Steven M. Goodman, Peter J. Mucha, Charles L. Nunn, Hillary Young, Georgia Titcomb"
+  },
+  {
+    "objectID": "posts/2026-06-02-multihost-poster/index.html#abstract",
+    "href": "posts/2026-06-02-multihost-poster/index.html#abstract",
+    "title": "EEID 2026 Poster - Multihost parasite sharing",
+    "section": "Abstract",
+    "text": "Abstract\nParasite sharing among wildlife species shapes biodiversity outcomes and offers broad insight into the mechanisms and geography of cross-species transmission. While spillover research often emphasizes zoonotic pathogens, transmission among wildlife hosts is widespread, tractable to study, and directly relevant to conservation. We combine parasite infection data with spatial analyses to test whether parasite sharing in a diverse community of endemic and invasive small mammals in Madagascar is associated with forest-agriculture boundaries. We define a “primary host” for each parasite as the host species in which the parasite is most frequently detected then all other infected host species as “secondary hosts”. We then predict where primary hosts and infected primary hosts are likely to occur using species distribution models, then evaluate where secondary hosts are likely to occur in regard to primary host occurrence and infection and distance to forst-agriculture boundaries. Guided by theory linking community assembly, contact structure, and transmission, we predict that spillover increases where primary and secondary hosts co-occur and is elevated at forest-agriculture boundaries where edge effects may increase interspecific contract rates and parasite diversity. Across host species and parasite taxa, we detect patterns consistent with edge-associated parasite sharing, but the relationship depends strongly on the level of secondary host habitat specialization. Thus revealing that multihost parasite sharing reflects interactions between landscape configuration and host ecological niches. These results indicate that habitat modification can restructure host overlap and parasite sharing, and that forecasting spillover requires combining edge effects with species-specific habitat associations. This framework can help identify permeable areas for cross-species transmission in wildlife communities and inform conservation planning and spillover risk assessment."
+  },
+  {
+    "objectID": "posts/2026-06-02-multihost-poster/index.html#key-words",
+    "href": "posts/2026-06-02-multihost-poster/index.html#key-words",
+    "title": "EEID 2026 Poster - Multihost parasite sharing",
+    "section": "Key words",
+    "text": "Key words\nMultihost parasites, Nematodes, environmental transmission, habitat boundaries, species distribution models"
+  },
+  {
+    "objectID": "posts/2026-01-28-smlepto-poster/index.html",
+    "href": "posts/2026-01-28-smlepto-poster/index.html",
+    "title": "Stanford Global Health Covening - Leptospira poster",
+    "section": "",
+    "text": "View the article and the commentary by AEM"
+  },
+  {
+    "objectID": "posts/2026-01-28-smlepto-poster/index.html#authors",
+    "href": "posts/2026-01-28-smlepto-poster/index.html#authors",
+    "title": "Stanford Global Health Covening - Leptospira poster",
+    "section": "Authors",
+    "text": "Authors\nJeanne A. Rajaonariveloa*, Kayla M. Kauffmanb*, Maheriniaina Toky Randriamoria, James P. Herrera, Natalie Wickenkamp, Magali Turpin, Fiona Baudino, Hillary Young, Voahangy Soarimalala, Steven M. Goodman, Charles L. Nunn, Pablo Tortosa *co-first authors"
+  },
+  {
+    "objectID": "posts/2026-01-28-smlepto-poster/index.html#abstract",
+    "href": "posts/2026-01-28-smlepto-poster/index.html#abstract",
+    "title": "Stanford Global Health Covening - Leptospira poster",
+    "section": "Abstract",
+    "text": "Abstract\nHuman-induced land-use change can affect the composition of small mammal communities and the ecology of their zoonotic pathogens — yet questions remain on the direction and generality of these changes, which can have opposite effects on disease prevalence depending on the ecological context and pathogen involved. These contrasting patterns highlight the need to investigate how specific host-pathogen assemblages respond to local anthropogenic land-use mosaics. To address this need, we studied terrestrial and bat species composition, Leptospira infection prevalence, and Leptospira species composition across a mosaic of land-use types in northeastern Madagascar. We found differences in host communities between forested, agricultural, and village land-use types for both bat (n = 400) and terrestrial (n = 2,053) small mammal communities. Leptospira infection prevalence was higher in bats (37.7%) than in terrestrial small mammals (13.8%), and bats were infected with Leptospira strains that were molecularly distinct from those shed by terrestrial small mammals. Non-native mice and rats were almost exclusively infected with cosmopolitan L. kirschneri and L. interrogans, respectively, while some native terrestrial small mammals sheltered L. mayottensis, and bats hosted a more diverse set of Leptospira species. Leptospira prevalence across land-use types varied in terrestrial small mammals, but not in bats. Altogether, the highest prevalence occurred in mice in flooded rice fields. Our data show that land use predominantly impacts Leptospira infecting terrestrial mammals, likely due to habitat disturbance favoring replacement of endemic hosts and pathogens with Muridae rodents and their associated pathogens, many of which are zoonotic."
+  },
+  {
+    "objectID": "posts/2026-01-28-smlepto-poster/index.html#key-words",
+    "href": "posts/2026-01-28-smlepto-poster/index.html#key-words",
+    "title": "Stanford Global Health Covening - Leptospira poster",
+    "section": "Key words",
+    "text": "Key words\nland cover change, emerging neglected tropical disease, invasive species, zoonosis, wildlife, One Health"
   }
 ]

@@ -25,6 +25,7 @@ Camille M. DeSisto\*; Raquel A. Binder\*; [Kayla Kauffman]{style="color:purple;"
 Jeanne A. Rajaonarivelo\*, [Kayla M. Kauffman\*]{style="color:purple;"}, Toky M. Randriamoria, James P. Herrera, Natalie Wickenkamp, Magali Turpin, Fiona Baudino, Hillary S. Young, Voahangy Soarimalala, Steven M. Goodman, Charles L. Nunn, Pablo Tortosa. Leptospira prevalence and lineages vary across land-use types due to shifts in small mammal communities. Applied Environmental Microbiology. 2026. e02061-25. <http://doi.org/10.1128/aem.02061-25>
 
 - AEM commentary: Changing landscapes, shifting reservoirs: land-use change and Leptospira ecology in Madagascar. <https://doi.org/10.1128/aem.00487-26>
+- [Poster presented at Stanford Global Health Convening 2026](posts/2026-01-28-smlepto-poster/index.qmd)
 
 ## 2025
 
@@ -33,6 +34,7 @@ Solis A, Anaeme A, Titcomb G, Janko M, Rabezara JY, Barrett TM, [Kauffman, K]{st
 Dubrulle J\*, [Kauffman, K\*]{style="color:purple;"}, Soarimalala V, Randriamoria T, Goodman SM, Herrera J, Nunn C, Tortosa P. Effects of habitat degradation on Hantavirus infection among introduced and endemic small mammals of Madagascar. Ecology and Evolution. 2025. <https://doi.org/10.1002/ece3.70914> \* *co-first authors*
 
 -   Press releases: <https://news.ucsb.edu/2025/021825/hantavirus-madagascar-linked-black-rats-agricultural-areas> and <https://researchblog.duke.edu/2025/04/08/forests-and-disease-risk-hantavirus-in-madagascar/>
+- [Poster presented at EEID 2025](posts/2025-06-16-hookworm-poster/index.qmd)
 
 ## 2024
 
